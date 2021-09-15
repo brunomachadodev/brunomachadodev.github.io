@@ -717,7 +717,7 @@ button:focus {
 
 @media (min-width: 430px) and (max-width: 767px) {
   #yooga-home .h1-container {
-    min-height: 120px;
+    min-height: 150px;
   }
 }
 
