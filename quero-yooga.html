@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/9d36313059.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        dataLayer.push({ step: "b1", event: "tracking" });
+      });
+    </script>
+
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WMZNTFT");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="keywords"
+      content="testar, teste, cadastro, gratuito, grátis, gestão, delivery, sistema, programa"
+    />
+    <meta
+      name="description"
+      content="Inicie o seu teste gratuito por 7 dias do nosso sistema de gestão e delivery. Vem pra Yooga."
+    />
+    <meta name="author" content="Yooga Tecnologia" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <title>Yooga - Comece a usar gratuitamente</title>
+
+    <link rel="shortcut icon" href="images/logo-icon.png" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style-form.css" />
+    <link rel="stylesheet" href="css/quero_yooga.css" />
+
+    <!-- Responsive -->
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <link rel="stylesheet" href="./css/general.css?v=1.1" />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <!-- <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  /> -->
+
+    <!-- og:type -->
+    <meta property="og:locale" content="pt_BR" />
+    <meta
+      property="og:url"
+      content="https://www.yooga.com.br/quero-yooga.html"
+    />
+
+    <meta property="og:site_name" content="Yooga Tecnologia" />
+    <meta property="og:title" content="Yooga - Comece a usar gratuitamente" />
+
+    <meta
+      property="og:description"
+      content="Inicie o seu teste gratuito por 7 dias do nosso sistema de gestão e delivery. Vem pra Yooga."
+    />
+
+    <meta
+      property="og:image"
+      content="https://yooga.com.br/images/logo_yooga_azul_325x325.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="325" />
+    <meta property="og:image:height" content="325" />
+
+    <meta property="og:type" content="website" />
+
+    <style type="text/css">
+      .only-mobile {
+        display: none;
+      }
+
+      .only-desktop {
+        display: inline !important;
+      }
+
+      @media (max-width: 992px) {
+        .banner-text-title {
+          font-size: 28px !important;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .only-mobile {
+          display: inline !important;
+        }
+
+        .only-desktop {
+          display: none !important;
+        }
+
+        .margin-auto-mobile {
+          margin: 0 auto !important;
+          width: 250px;
+          display: block;
+          text-align: center;
+        }
+      }
+
+      #contactform iframe {
+        height: auto !important;
+      }
+
+      @media only screen and (max-width: 767px) {
+        fieldset {
+          margin-bottom: 100px !important;
+        }
+      }
+
+      select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+
+      .f-12 {
+        font-size: 12px !important;
+      }
+
+      .f-13 {
+        font-size: 13px !important;
+      }
+
+      .f-16 {
+        font-size: 16px !important;
+      }
+
+      .w-5 {
+        width: 5% !important;
+      }
+    </style>
+  </head>
+
+  <body data-spy="scroll" data-offset="80">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WMZNTFT"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header -->
+    <header id="yooga-header">
+      <nav
+        id="nav"
+        class="
+          py-2
+          px-xl-5 px-3
+          navbar navbar-default navbar-expand-lg navbar-light
+          menu-top
+        "
+      >
+        <div class="container-fluid">
+          <a id="param0" class="param navbar-brand" href="./">
+            <img src="./images/logo.png" alt="Logotipo Yooga" />
+          </a>
+    
+          <button
+            aria-label="Abrir Menu"
+            id="btn-mobile"
+            aria-haspopup="true"
+            aria-controls="menu"
+            aria-expanded="false"
+          >
+            <span id="hamburger"></span>
+          </button>
+    
+          <ul id="menu" class="navbar-nav ml-auto menu desktop-nav">
+            <li class="nav-item">
+              <a id="param1" class="param" href="./"> Início </a>
+            </li>
+            <li class="nav-item">
+              <a id="param2" class="param" href="./planos-precos"> Planos e Preços </a>
+            </li>
+            <li class="nav-item dropdown">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                id="funcionalidadesDropdown"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Soluções
+                <i style="margin-left: 6px" class="fas fa-chevron-down"></i>
+              </button>
+              <ul
+                class="dropdown-menu funcionalidade-dropdown"
+                aria-labelledby="funcionalidadesDropdown"
+              >
+                <li>
+                  <a id="param3" class="param dropdown-item" href="./solucoes/gestao">
+                    <i><img class="dropdown-icon" src="./images/funcionalidades/gestao.svg" alt=""></i>
+                    <div>
+                      <h3>Sistema de Gestão</h3>
+                      <small>
+                        Gerenciamento total das etapas de operação, com simplicidade
+                        e praticidade em qualquer dispositivo.
+                      </small>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a id="param4" class="param dropdown-item" href="./solucoes/delivery">
+                    <i><img class="dropdown-icon" src="./images/funcionalidades/delivery.svg" alt=""></i>
+                    <div>
+                      <h3>Delivery Próprio</h3>
+                      <small>
+                        Maior autonomia para seus clientes realizarem os pedidos e a
+                        oportunidade para você vender muito mais.
+                      </small>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a id="param5" class="param dropdown-item" href="./solucoes/fiscal">
+                    <i><img class="dropdown-icon" src="./images/funcionalidades/fiscal.svg" alt=""></i>
+                    <div>
+                      <h3>Fiscal Completo</h3>
+                      <small>
+                        Todas as ferramentas para atender as demandas fiscais do seu
+                        restaurante e deixar o dia a dia mais tranquilo.
+                      </small>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a id="param6" class="param" href="https://yooga.com.br/empresa/login">
+                Área do Cliente <i class="fas fa-lock"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                id="param7"
+                class="param button btn-experimente"
+                href="./quero-yooga"
+                onclick="dataLayer.push({'step': 'k1', 'event': 'tracking'});"
+                >Experimente Grátis</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    
+    <section
+      id="iq-home"
+      class="iq-banner overview-block-pt iq-bg iq-bg-fixed iq-over-blue-90"
+    >
+      <div class="container-fluid">
+        <div class="banner-text">
+          <div class="row">
+            <div class="col-md-12">
+              <form id="msform">
+                <ul id="progressbar">
+                  <li class="active">Passo</li>
+                  <li>Passo</li>
+                  <li>Fim</li>
+                </ul>
+
+                <!-- Step 1 -->
+                <fieldset>
+                  <h3 class="fs-title">FALE UM POUCO SOBRE VOCÊ</h3>
+                  <input
+                    class="f-12"
+                    type="text"
+                    required
+                    id="name"
+                    name="name"
+                    placeholder="Nome"
+                  />
+                  <input
+                    class="f-12"
+                    type="email"
+                    required
+                    autocomplete="off"
+                    id="email"
+                    name="email"
+                    placeholder="E-mail"
+                  />
+                  <input
+                    class="f-12"
+                    type="tel"
+                    required
+                    id="phone"
+                    name="phone"
+                    placeholder="Telefone"
+                  />
+                  <!-- <input class="f-12" type="text" id="cupom" name="cupom" placeholder="CUPOM"/> -->
+                  <input
+                    type="button"
+                    name="next"
+                    class="button btn-primary next action-button f-16"
+                    value="Próximo"
+                  />
+                  <p
+                    class="f-12"
+                    id="WrongPhone"
+                    style="
+                      color: rgb(173, 36, 36);
+                      font-weight: bold;
+                      display: none;
+                    "
+                  >
+                    Confira os dados e tente novamente!
+                  </p>
+                </fieldset>
+
+                <!-- Step 2 -->
+                <fieldset>
+                  <h3 class="fs-title">QUEREMOS CONHECER SEU NEGÓCIO</h3>
+                  <input
+                    class="f-12"
+                    type="text"
+                    id="company"
+                    name="company"
+                    placeholder="Nome da Empresa"
+                  />
+                  <div style="position: relative">
+                    <i
+                      class="fa fa-chevron-down"
+                      style="position: absolute; right: 10px; top: 15px"
+                    ></i>
+                    <select
+                      id="negocio"
+                      style="font-size: 13px; padding-left: 10px !important"
+                    >
+                      <option value="">Tipo do estabelecimento...</option>
+                      <option>Informática / Acessórios</option>
+                      <option>Hot Dog</option>
+                      <option>Sorveteria</option>
+                      <option>Restaurante</option>
+                      <option>Floricultura</option>
+                      <option>Doceria</option>
+                      <option>Cosméticos</option>
+                      <option>Suplementos</option>
+                      <option>Lava jato</option>
+                      <option>Roupas e Acessórios</option>
+                      <option>Auto Peças</option>
+                      <option>Bar / Petiscaria</option>
+                      <option>Padaria / Cafeteria</option>
+                      <option>Churrasquinho</option>
+                      <option>Saladeria</option>
+                      <option>Distribuidora de Bebidas</option>
+                      <option>Petshop</option>
+                      <option>Barbearia</option>
+                      <option>Material de Construção</option>
+                      <option>Hamburgueria</option>
+                      <option>Açaíteria</option>
+                      <option>Açogue</option>
+                      <option>Pizzaria</option>
+                      <option>Sushi</option>
+                      <option>Neutro</option>
+                      <option>Outros</option>
+                    </select>
+                  </div>
+
+                  <hr />
+
+                  <div style="text-align: left !important">
+                    <h3 class="fs-title" style="text-align: left">
+                      COMO VOCÊ FAZ SUAS VENDAS?
+                    </h3>
+                    <input
+                      class="w-5"
+                      id="como-vendas-presencial"
+                      name="como-vendas"
+                      value="SISTEMA DE GESTÃO"
+                      type="radio"
+                    />
+                    <label class="f-12" for="como-vendas-presencial">
+                      VENDAS PRESENCIAIS
+                    </label>
+                    <br />
+                    <input
+                      class="w-5"
+                      id="como-vendas-delivery"
+                      name="como-vendas"
+                      value="DELIVERY"
+                      type="radio"
+                    />
+                    <label class="f-12" for="como-vendas-delivery">
+                      DELIVERY
+                    </label>
+                    <br />
+                    <input
+                      class="w-5"
+                      id="como-vendas-ambos"
+                      name="como-vendas"
+                      value="OS DOIS"
+                      type="radio"
+                    />
+                    <label class="f-12" for="como-vendas-ambos">AMBOS</label>
+                    <br />
+                  </div>
+
+                  <input
+                    type="button"
+                    name="next_2"
+                    class="next_2 action-button"
+                    value="Enviar"
+                  />
+                </fieldset>
+
+                <!-- Step 3 -->
+                <fieldset>
+                  <div style="text-align: left !important">
+                    <h3
+                      style="margin-top: 15px; text-transform: uppercase"
+                      class="fs-title"
+                    >
+                      Qual seu faturamento mensal?
+                    </h3>
+                    <input
+                      class="w-5"
+                      id="faturamento_ate_cinco_mil"
+                      name="faturamento_mensal"
+                      value="Até R$5.000"
+                      type="radio"
+                    />
+                    <label class="f-12" for="faturamento_ate_cinco_mil">
+                      até 5 mil
+                    </label>
+                    <br />
+                    <input
+                      class="w-5"
+                      id="faturamento_cinco_a_vinte"
+                      name="faturamento_mensal"
+                      value="De R$5.000-R$20.000"
+                      type="radio"
+                    />
+                    <label class="f-12" for="faturamento_cinco_a_vinte">
+                      5 a 20 mil
+                    </label>
+                    <br />
+                    <input
+                      class="w-5"
+                      id="faturamento_vinte_quarenta"
+                      name="faturamento_mensal"
+                      value="De R$20.000-R$40.000"
+                      type="radio"
+                    />
+                    <label class="f-12" for="faturamento_vinte_quarenta">
+                      20 a 40 mil
+                    </label>
+                    <br />
+                    <input
+                      class="w-5"
+                      id="faturamento_mais_de_quarenta"
+                      name="faturamento_mensal"
+                      value="Mais de R$40.000"
+                      type="radio"
+                    />
+                    <label class="f-12" for="faturamento_mais_de_quarenta">
+                      + de 40 mil
+                    </label>
+
+                    <br />
+
+                    <hr />
+
+                    <h3
+                      style="margin-top: 15px; text-transform: uppercase"
+                      class="fs-title"
+                    >
+                      Quanto tempo tem seu negócio?
+                    </h3>
+                    <input
+                      class="w-5"
+                      id="um_seis_meses"
+                      name="tempo_negocio"
+                      value="1 a 6 meses"
+                      type="radio"
+                    />
+                    <label class="f-12" for="um_seis_meses">
+                      1 a 6 meses
+                    </label>
+                    <br />
+                    <input
+                      class="w-5"
+                      id="sete_doze_meses"
+                      name="tempo_negocio"
+                      value="7 a 12 meses"
+                      type="radio"
+                    />
+                    <label class="f-12" for="sete_doze_meses">
+                      7 a 12 meses
+                    </label>
+                    <br />
+                    <input
+                      class="w-5"
+                      id="mais_dois_anos"
+                      name="tempo_negocio"
+                      value="Mais de 2 anos"
+                      type="radio"
+                    />
+                    <label class="f-12" for="mais_dois_anos">
+                      Mais de 2 anos
+                    </label>
+                    <br />
+                    <input
+                      class="w-5"
+                      id="ainda_nao_abri"
+                      name="tempo_negocio"
+                      value="Ainda não abri"
+                      type="radio"
+                    />
+                    <label class="f-12" for="ainda_nao_abri">
+                      Ainda não abri
+                    </label>
+
+                    <br />
+                  </div>
+                  <input
+                    type="button"
+                    name="last"
+                    class="last action-button"
+                    value="Enviar"
+                  />
+                </fieldset>
+
+                <fieldset>
+                  <h2>
+                    <i
+                      style="color: #28a745; font-size: 72px"
+                      class="fa fa-check-circle-o"
+                      aria-hidden="true"
+                    ></i>
+                  </h2>
+                  <h4 class="" style="margin-top: 32px">
+                    Cadastro concluido, como você prefere continuar?
+                  </h4>
+                  <br />
+                  <input
+                    type="button"
+                    class="especialista btnteste"
+                    name="especialista"
+                    value="Falar com especialista"
+                  />
+                  <input
+                    type="button"
+                    id="usar-sistema-btn"
+                    class="btnteste"
+                    name="teste"
+                    value="Usar o sistema agora"
+                  />
+                </fieldset>
+
+                <fieldset>
+                  <div id="espec" style="display: none">
+                    <h2>
+                      <i
+                        style="color: #28a745; font-size: 72px"
+                        class="fa fa-check-circle-o"
+                        aria-hidden="true"
+                      ></i>
+                    </h2>
+                    <h4 class="fs-title" style="margin-top: 30px">
+                      Ótimo, nosso time entrará em contato com você em até 24
+                      horas!
+                    </h4>
+                    <ul class="info-share text-center">
+                      <li>
+                        <a
+                          target="_blank"
+                          href="https://www.instagram.com/yoogatecnologia/?hl=pt-br&utm_source=instagram&utm_medium=landing-page&utm_campaign=stepyooga&utm_content=link"
+                          ><i class="fa fa-instagram"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a
+                          target="_blank"
+                          href="https://www.linkedin.com/company/yoogatecnologia/?utm_source=linkedin&utm_medium=landing-page&utm_campaign=stepyooga&utm_content=link"
+                          ><i class="fa fa-linkedin"></i
+                        ></a>
+                      </li>
+                    </ul>
+                    <h4 class="fs-title" style="margin-top: 22px">
+                      Já segue a gente no Instagram?
+                    </h4>
+                  </div>
+
+                  <div id="usar-sistema">
+                    <h4
+                      style="
+                        margin-top: 30px;
+                        font-size: 18px;
+                        margin-bottom: 25px;
+                      "
+                    >
+                      Finalize seu cadastro para começar!
+                    </h4>
+
+                    <input
+                      class="f-12"
+                      type="text"
+                      id="cnpj"
+                      name="name"
+                      placeholder="CPF ou CNPJ"
+                    />
+                    <input
+                      class="f-12"
+                      type="password"
+                      autocomplete="off"
+                      required
+                      id="password"
+                      name="password"
+                      placeholder="Senha"
+                    />
+
+                    <div style="position: relative">
+                      <!-- <i
+                        class="fa fa-chevron-down"
+                        style="position: absolute; right: 10px; top: 15px"
+                      ></i> -->
+                      <select
+                        id="negocio-finish"
+                        style="
+                          font-size: 13px;
+                          appearance: auto !important;
+                          padding-left: 10px !important;
+                        "
+                      >
+                        <option value="">Toque para selecionar...</option>
+                        <option>Informática / Acessórios</option>
+                        <option>Hot Dog</option>
+                        <option>Sorveteria</option>
+                        <option>Restaurante</option>
+                        <option>Floricultura</option>
+                        <option>Doceria</option>
+                        <option>Cosméticos</option>
+                        <option>Suplementos</option>
+                        <option>Lava jato</option>
+                        <option>Roupas e Acessórios</option>
+                        <option>Auto Peças</option>
+                        <option>Bar / Petiscaria</option>
+                        <option>Padaria / Cafeteria</option>
+                        <option>Churrasquinho</option>
+                        <option>Saladeria</option>
+                        <option>Distribuidora de Bebidas</option>
+                        <option>Petshop</option>
+                        <option>Barbearia</option>
+                        <option>Material de Construção</option>
+                        <option>Hamburgueria</option>
+                        <option>Açaíteria</option>
+                        <option>Açogue</option>
+                        <option>Pizzaria</option>
+                        <option>Sushi</option>
+                        <option>Neutro</option>
+                        <option>Outros</option>
+                      </select>
+                    </div>
+
+                    <input
+                      type="button"
+                      class="test-now-btn btnteste"
+                      style="background-color: #f45b93 !important"
+                      name="test-now-btn"
+                      value="Iniciar sistema"
+                    />
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="iq-our-clients white-bg"
+      style="padding: 50px 0 !important; border-top: 0"
+    ></div>
+    <div id="clientes" class="container">
+      <div class="row"></div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="offset-sm-1 col-sm-5 logo-container">
+            <a id="param8" class="param logo" href="./"
+              ><img src="./images/home/logo-primaria.svg" alt="Logotipo Yooga"
+            /></a>
+    
+            <ul>
+              <li class="redes-sociais">
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/company/yoogatecnologia"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li class="redes-sociais">
+                <a
+                  target="_blank"
+                  href="https://www.youtube.com/channel/UCvjUM98AY2QxxL2Iq8dRrFw"
+                >
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+              <li class="redes-sociais">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/yoogatecnologia/"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li class="redes-sociais">
+                <a target="_blank" href="https://pt-br.facebook.com/beyooga/">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 offset-sm-1 col-sm-5 sobre footer-links">
+            <p>
+              <strong>SOBRE A YOOGA</strong>
+            </p>
+            <div class="row">
+              <div class="col-12 pb-3">
+                <a
+                  data-bs-toggle="collapse"
+                  href="#footerSolucoes"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="footerSolucoes"
+                  class="links footer-solucoes"
+                >
+                  Soluções
+                  <i
+                    style="margin-left: 6px"
+                    class="fas fa-chevron-down"
+                    aria-hidden="true"
+                  ></i>
+                </a>
+    
+                <ul class="collapse" id="footerSolucoes">
+                  <li>
+                    <a id="param9" href="./solucoes/gestao" class="param links">
+                      Gestão
+                    </a>
+                  </li>
+                  <li>
+                    <a id="param10" href="./solucoes/delivery" class="param links">
+                      Delivery
+                    </a>
+                  </li>
+                  <li>
+                    <a id="param11" href="./solucoes/fiscal" class="param links">
+                      Fiscal
+                    </a>
+                  </li>
+                </ul>
+              </div>
+    
+              <div class="col-12 pb-3">
+                <a id="param12" href="./planos-precos" class="param links"
+                  >Planos e Preços</a
+                >
+              </div>
+              <div class="col-12 pb-3">
+                <a
+                  href="https://yooga.com.br/blog/?utm_source=site-naveged&utm_medium=site-page&utm_campaign=blog2021&utm_content=cta-footer"
+                  class="links"
+                  >Blog</a
+                >
+              </div>
+              <div class="col-12 pb-3">
+                <a
+                  href="https://yooga.com.br/autonomo?utm_source=site-naveged&utm_medium=landing-page&utm_content=cta-footer"
+                  class="links"
+                  >Mercado Autônomo</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" style="overflow-x: hidden !important">
+        <div class="row faixa">
+          <div
+            class="
+              col-12
+              offset-md-1
+              col-md-5
+              offset-lg-4
+              col-lg-4
+              offset-xl-5
+              col-xl-3
+            "
+          >
+            <p>Feito com amor por Yooga Tecnologia <i class="fas fa-heart"></i></p>
+          </div>
+          <div
+            class="
+              col-12
+              offset-md-1
+              col-md-5
+              offset-lg-1
+              col-lg-3
+              offset-xl-2
+              col-xl-2
+            "
+          >
+            <span class="links">
+              <i class="far fa-envelope"></i>
+              <a href="mailto: contato@yooga.com.br"> contato@yooga.com.br </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- jQuery -->
+
+    <script type="text/javascript" src="js/quero_yooga.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"
+      integrity="sha256-HQCkPjsckBtmO60xeZs560g8/5v04DvOkyEo01zhSpo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- bootstrap -->
+    <!-- <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script> -->
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+    ></script>
+
+    <!-- Custom -->
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script src="./js/general.js?v=1.0"></script>
+
+    <script type="text/javascript">
+      var firstStep = false;
+
+      $("#phone").inputmask({
+        mask: function () {
+          return ["(99) 9999-9999", "(99) 99999-9999"];
+        },
+      });
+
+      $("#cnpj").inputmask({
+        mask: function () {
+          return ["999.999.999-99", "99.999.999/9999-99"];
+        },
+      });
+    </script>
+  </body>
+</html>

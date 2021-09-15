@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- <script>
+        dataLayer = [];
+    </script> -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script>
+        // var dataLayer = window.dataLayer || [];
+
+        // function step1() {
+        //     window.dataLayer.push({'event': 'tracking', 'contais': 'step1'})
+        // }
+        // function step2() {
+        //     this.dataLayer.push({'contains': 'step2', 'event': 'tracking'})
+        // }
+
+      </script>
+      <script type="text/javascript">
+        $(document).ready(function() {
+            dataLayer.push({'step': 0, 'event': 'tracking'})
+        });
+
+        window.location.replace("https://yooga.com.br/pipe-vendas");
+      </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Gestão, sistema, controle, microempresário, vendas, sorveteria, saladeria, distribuidora" />
+    <meta name="description" content="Automatize suas vendas com simplicidade, rapidez e organização" />
+    <meta name="author" content="Yooga Tecnologia"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <title>Yooga Tecnologia - Gestão Suave</title>
+    
+    <link rel="shortcut icon" href="images/logo-icon.png"/>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" integrity="sha256-39jKbsb/ty7s7+4WzbtELS4vq9udJ+MDjGTD5mtxHZ0=" crossorigin="anonymous" />
+
+    <!-- Animate -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous" /> -->
+
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.0/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quero_yooga.css">
+
+    <!-- Responsive -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <meta property="og:site_name" content="Yooga Tecnologia" />
+    <meta property="og:url" content="https://www.yooga.com.br/" />
+    <meta property="og:image" content="https://yooga.com.br/images/logo_yooga_azul_325x325.png" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <style type="text/css">
+        .only-mobile {
+            display: none;
+        }
+
+        .only-desktop {
+            display: inline !important;
+        }
+
+
+
+        @media(max-width: 992px) {
+
+            .banner-text-title {
+                font-size: 28px !important;
+            }
+        }
+
+        @media(max-width: 700px) {
+            .only-mobile {
+                display: inline !important;
+            }
+
+            .only-desktop {
+                display: none !important;
+            }
+
+            .margin-auto-mobile {
+                margin: 0 auto !important;
+                width: 250px;
+                display: block;
+                text-align: center;
+            }
+
+        }
+
+        #contactform iframe {
+            height: auto !important;
+        }
+    </style>
+
+</head>
+
+<body data-spy="scroll" data-offset="80">
+
+    <!-- Header -->
+
+    <header id="header-wrap">
+        <nav class="navbar navbar-default navbar-expand-lg navbar-light menu-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="https://yooga.com.br/">
+                    <img class="img-responsive" src="images/logo.png" style="width: 140px !important; height: 40px !important; margin-left: 20px" alt="logo">  
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <!-- <li class="nav-item"><a class="page-scroll" target="_blank" href="https://yooga.com.br">Início</a></li> -->
+                        <!-- <li class="nav-item"><a class="page-scroll" target="_blank" href="https://yooga.com.br/empresa/login?utm_source=site-navegated&utm_medium=landing-page&utm_campaign=landredirect&utm_content=banner-header"><i class="ion-ios-locked"></i> Área do Cliente</a></li>    -->
+                        <!-- <a href="" class="button btn-primary btn-experimente only-desktop">Experimente Grátis</a> -->
+                            <!-- <a href="/empresa" class="button bt-black pull-right  btn-area visible-lg">Área do Cliente</a> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <section id="iq-home" class="iq-banner overview-block-pt iq-bg iq-bg-fixed iq-over-blue-90">
+        <div class="container-fluid">
+            <div class="banner-text">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form id="msform">
+                            
+                            <fieldset>
+                                <h3 class="fs-title">CONTA AI QUEM É ESSE LEAD:</h3>
+
+                                    <input style="width: 5% !important;" id="origin" name="origin" value="CHAT" type="radio">
+                                    <label style="font-size: 12px;" for="origin">CHAT</label><br>
+                                    <input style="width: 5% !important;" id="origin" name="origin" value="SOCIAL" type="radio">
+                                    <label style="font-size: 12px;" for="origin">SOCIAL</label><br>
+                                    <input style="width: 5% !important;" id="origin" name="origin" value="INDICACAO" type="radio">
+                                    <label style="font-size: 12px;" for="origin">INDICAÇÃO</label><br>
+
+                                <input style="font-size: 12px;" type="text" id="name" name="name" placeholder="Nome do Contato"/>
+                                <input style="font-size: 12px;" type="text" id="company" name="company" placeholder="Nome da Empresa"/>
+                                <input style="font-size: 12px;" type="email" id="email" name="email" placeholder="E-mail"/>
+                                <input style="font-size: 12px;" type="tel" id="phone" name="phone" placeholder="Telefone"/>
+                                <input style="font-size: 12px;" type="text" id="instagram" name="instagram" placeholder="Instagram"/>
+                                <input style="font-size: 12px;" type="text" id="quem_indicou_2_0" name="quem_indicou_2_0" placeholder="Quem indicou"/>
+                                <input style="font-size: 12px;" type="text" id="utm" name="utm" placeholder="utm"/>
+                                <input style="font-size: 16px;" type="button" name="next" class="button btn-primary next action-button" value="Só vai!"/>
+                                <p id="WrongPhone" style="font-size: 12px; color:rgb(173, 36, 36); font-weight: bold; display: none;">Confira dos dados, e tente novamente!</p>
+                            </fieldset>
+                           
+                            <fieldset>
+                                <div id="espec">
+
+                                    <h2><i style="color: #28a745; font-size: 72px;" class="fa fa-check-circle-o" aria-hidden="true"></i></h2>
+                                    <h4 class="fs-title" style="margin-top: 30px;">Valeu!! Bom trabalho para você a Yooga agradece!</h4>
+                                    <ul class="info-share text-center">
+                                        <li><a target="_blank" href="https://www.instagram.com/yoogatecnologia/"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a target="_blank" href="https://www.linkedin.com/company/yoogatecnologia/"><i class="fab fa-linkedin"></i></a></li>
+                                    </ul> 
+                                    <h4 class="fs-title" style="margin-top: 22px;">Já postou no Instagram hoje :)?</h4>
+                                    <button class="button" style="cursor: pointer;" href="pipe-vendas.html"> Cadastrar outro Lead</button>
+
+                                </div>
+                            </fieldset>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="iq-our-clients white-bg" style="padding:50px 0 !important; border-top: 0;"></div>
+        <div id="clientes" class="container">
+            <div class="row">
+              
+            </div>
+        </div>
+    </div>
+  
+    <footer>        
+        <section class="footer-info iq-pb-70">
+            <div class="container">
+                <div class="row" style="margin-top: 0px; margin-bottom: 20px;">
+                    <div class="col-sm-6 col-md-6">
+                        <div class="row">
+                            <div class="col-12 info-share">
+                                <a href="#top">
+                                    <img style=" margin: 0 auto;" src="./images/Logo_Horizontal_bom.png" width="230px"></img>
+                                </a>
+                            </div>
+                            <div class="col-md-12 footer-content" style="text-align: left; margin-top: 10px;bottom: 0;">
+                         
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 re-mt-30">
+                        <div class="row only-desktop">
+                            <div class="col-md-12 text-right" style="color: #aaa; font-size: 14px;">
+                                <p style="margin-right: 12px;"><i class="fa fa-envelope" aria-hidden="true"></i> contato@yooga.com.br</p>
+                                <p><i class="fa fa-map-marker" aria-hidden="true"></i> Av. Vitória, 1170 - Vitória - ES</p>
+                                <a href=""><img style=" margin: 0 auto;" src="./images/cash_back.jpeg" width="50px"></img></a>
+                                <a href="" style="margin-left: 30px;"><img style="margin: 0 auto;" src="./images/site_seguro_.jpeg" width="120px"></img></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 text-center">
+                    <span style="color: #aaa; ;">&copy; Yooga Tecnologia <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script></span>
+                </div>
+            </div>
+        </section>
+    </footer>
+    
+    <!-- jQuery -->
+
+    <script type="text/javascript" src="js/pipe-vendas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js" integrity="sha256-HQCkPjsckBtmO60xeZs560g8/5v04DvOkyEo01zhSpo=" crossorigin="anonymous"></script>
+
+
+      <!-- bootstrap -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+      <!-- Skrollr -->
+      <script type="text/javascript" src="js/skrollr.min.js"></script>
+      <!-- Counter -->
+      <script type="text/javascript" src="js/counter/jquery.countTo.js"></script>
+  
+      <!-- Jquery Appear -->
+      <script type="text/javascript" src="js/jquery.appear.js"></script>
+  
+      <!-- Magnific Popup -->
+      <script type="text/javascript" src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
+  
+      <!-- Retina -->
+      <script type="text/javascript" src="js/retina.min.js"></script>
+  
+      <!-- wow -->
+      <script type="text/javascript" src="js/wow.min.js"></script>
+  
+      <!-- Countdown -->
+      <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
+      <script type="text/javascript" src="js/jquery_easing.js"></script>
+      <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.compatibility.min.js"></script> -->
+      <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+      
+      <!-- Custom -->
+      <script type="text/javascript" src="js/custom.js"></script>
+      
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+      
+  
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      
+      <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+      <script type="text/javascript">
+          ScrollReveal().reveal('.headline', { delay: 600, origin: 'right', distance: '100px'});
+          ScrollReveal().reveal('.headline2', { delay: 200, origin: 'right', distance: '20px'});
+          ScrollReveal().reveal('.headline3', { delay: 300, origin: 'right', distance: '0px'});
+          ScrollReveal().reveal('.headline4', { delay: 1000, origin: 'right', distance: '0px'});
+      </script>
+  
+      
+    <script type="text/javascript">
+      var firstStep = false;
+
+      $('#phone').inputmask({"mask": function() { 
+          return ['(99) 9999-9999','(99) 99999-9999'];
+            } 
+        }); 
+    </script>
+  
+</body>
+
+</html>

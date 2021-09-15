@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WMZNTFT");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Cardápio digital, gerenciador de pedidos • Yooga</title>
+  
+    <meta
+      name="description"
+      content="Aproxime-se do seu cliente e venda sem taxas com o delivery próprio Yooga. No computador ou celular, comece agora a simplificar sua operação."
+    />
+    <meta name="author" content="Yooga" />
+    <meta
+      name="facebook-domain-verification"
+      content="4u40aid8uba56fg01rq7utnq1ielkk"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- og:type -->
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="https://www.yooga.com.br/" />
+
+    <meta property="og:site_name" content="Yooga Tecnologia" />
+    <meta
+      property="og:title"
+      content="Yooga, Gestão Suave para o seu negócio"
+    />
+
+    <meta
+      property="og:description"
+      content="Aproxime-se do seu cliente e venda sem taxas com o delivery próprio Yooga. No computador ou celular, comece agora a simplificar sua operação."
+    />
+
+    <meta
+      property="og:image"
+      content="https://yooga.com.br/images/logo_yooga_azul_325x325.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="325" />
+    <meta property="og:image:height" content="325" />
+
+    <meta property="og:type" content="website" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/9d36313059.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Owl Carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Yooga CSS -->
+    <link rel="stylesheet" href="../css/general.css?v=1.1" />
+    <link rel="stylesheet" href="../css/solucoes.css?v=1.1" />
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WMZNTFT"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navbar -->
+    <header id="yooga-header">
+      <nav
+        id="nav"
+        class="
+          py-2
+          px-xl-5 px-3
+          navbar navbar-default navbar-expand-lg navbar-light
+          menu-top
+        "
+      >
+        <div class="container-fluid">
+          <a id="param0" class="param navbar-brand" href="../">
+            <img src="../images/logo.png" alt="Logotipo Yooga" />
+          </a>
+
+          <button
+            aria-label="Abrir Menu"
+            id="btn-mobile"
+            aria-haspopup="true"
+            aria-controls="menu"
+            aria-expanded="false"
+          >
+            <span id="hamburger"></span>
+          </button>
+
+          <ul id="menu" class="navbar-nav ml-auto menu desktop-nav">
+            <li class="nav-item">
+              <a id="param1" class="param" href="../"> Início </a>
+            </li>
+            <li class="nav-item">
+              <a id="param2" class="param" href="../planos-precos"> Planos e Preços </a>
+            </li>
+            <li class="nav-item dropdown">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                id="funcionalidadesDropdown"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Soluções
+                <i style="margin-left: 6px" class="fas fa-chevron-down"></i>
+              </button>
+              <ul
+                class="dropdown-menu funcionalidade-dropdown"
+                aria-labelledby="funcionalidadesDropdown"
+              >
+                <li>
+                  <a id="param3" class="param dropdown-item" href="./gestao">
+                    <i><img class="dropdown-icon" src="../images/funcionalidades/gestao.svg" alt=""></i>
+                    <div>
+                      <h3>Sistema de Gestão</h3>
+                      <small>
+                        Gerenciamento total das etapas de operação, com
+                        simplicidade e praticidade em qualquer dispositivo.
+                      </small>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a id="param4" class="param dropdown-item active" href="./delivery">
+                    <i><img class="dropdown-icon" src="../images/funcionalidades/delivery.svg" alt=""></i>
+                    <div>
+                      <h3>Delivery Próprio</h3>
+                      <small>
+                        Maior autonomia para seus clientes realizarem os pedidos
+                        e a oportunidade para você vender muito mais.
+                      </small>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a id="param5" class="param dropdown-item" href="./fiscal">
+                    <i><img class="dropdown-icon" src="../images/funcionalidades/fiscal.svg" alt=""></i>
+                    <div>
+                      <h3>Fiscal Completo</h3>
+                      <small>
+                        Todas as ferramentas para atender as demandas fiscais do
+                        seu restaurante e deixar o dia a dia mais tranquilo.
+                      </small>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a id="param6" class="param" href="https://yooga.com.br/empresa/login">
+                Área do Cliente <i class="fas fa-lock"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                id="param7"
+                class="param button btn-experimente"
+                href="../quero-yooga"
+                onclick="dataLayer.push({'step': 'l1', 'event': 'tracking'});"
+                >Experimente Grátis</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Home -->
+    <section id="yooga-home">
+      <div class="banner-text">
+        <div class="d-flex flex-column justify-content-between">
+          <h1>Delivery Próprio</h1>
+
+          <h2>
+            Atenda seus clientes de forma segura e direta, sem pagar taxas a
+            mais sobre as suas vendas.
+          </h2>
+
+          <a
+            id="param8"
+            class="param button btn-experimente"
+            href="../quero-yooga"
+            onclick="dataLayer.push({'step': 'l2', 'event': 'tracking'});"
+          >
+            Teste Gratuitamente
+          </a>
+        </div>
+      </div>
+    </section>
+    <div style="line-height: normal" class="wave-container first-div">
+      <img
+        style="line-height: normal; margin-bottom: -5px"
+        src="../images/funcionalidades/wave-main.svg"
+        alt=""
+      />
+    </div>
+
+    <!-- Clientes -->
+    <section id="yooga-clientes">
+      <div class="container">
+        <div class="row">
+          <div class="col-4 col-md-3 cliente-logo-container">
+            <img
+              src="../images/clientes/number-one.png"
+              alt="Number One Chicken"
+            />
+          </div>
+          <div class="col-4 col-md-3 cliente-logo-container">
+            <img
+              src="../images/clientes/splash-bebidas.png"
+              alt="Cliente Splash Bebidas"
+            />
+          </div>
+          <div class="col-4 col-md-3 cliente-logo-container">
+            <img src="../images/clientes/outbeco.png" alt="Outbeco" />
+          </div>
+          <div class="col-4 col-md-3 cliente-logo-container">
+            <img src="../images/clientes/paletitas.png" alt="Paletitas" />
+          </div>
+          <div class="col-4 col-md-3 cliente-logo-container">
+            <img src="../images/clientes/40.png" alt="40 Sabores" />
+          </div>
+          <div class="col-4 col-md-3 cliente-logo-container">
+            <img src="../images/clientes/green.png" alt="Greenstation" />
+          </div>
+          <div class="col-4 col-md-3 cliente-logo-container">
+            <img src="../images/clientes/vila_do_acai.png" alt="Vila do Açaí" />
+          </div>
+          <div class="col-4 col-md-3 cliente-logo-container">
+            <img src="../images/clientes/soul-green.png" alt="Soul Green" />
+          </div>
+          <div class="col-4 col-md-3 cliente-logo-container">
+            <img src="../images/clients/ze3.png" alt="Zé Coxinha" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Funcionalidades 1 - Cardápio Digital -->
+    <section class="funcionalidades odd" id="cardapio-digital">
+      <div class="section-container funcionalidades-container">
+        <div class="text-container">
+          <h3>Cardápio digital</h3>
+          <p>
+            Cardápio personalizado on-line, com as fotos e as descrições dos
+            produtos do seu restaurante. <br />
+            Seu cliente registra<span class="dots" id="dots-1">... </span
+            ><span class="extra-text" id="extra-1">
+              o pedido sem baixar nenhum aplicativo e você tem todo o
+              acompanhamento pelo Sistema de Gestão Yooga.
+            </span>
+            <span class="ler" id="ler-1">Ler mais</span>
+          </p>
+        </div>
+
+        <div class="img-container">
+          <img
+            style="box-shadow: none;"
+            src="../images/funcionalidades/cardapio_digital.webp"
+            alt="Cardápio Digital do Sistema Yooga"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Funcionalidades 2 - Gerenciador de pedidos -->
+    <section class="funcionalidades even" id="gerenciador-pedidos">
+      <div class="section-container funcionalidades-container">
+        <div class="text-container">
+          <h3>Gerenciador de pedidos</h3>
+          <p>
+            Gestão integrada dos pedidos, atendendo o delivery sem falhas e
+            dentro do prazo. As entradas são facilmente direcionadas para a
+            cozinha e<span class="dots" id="dots-2">...</span
+            ><span class="extra-text" id="extra-2">
+              para a entrega. <br />A função ainda permite que o cliente agende
+              a data e horário da entrega, de acordo com as particularidades que
+              você definir.
+            </span>
+            <span class="ler" id="ler-2">Ler mais</span>
+          </p>
+        </div>
+
+        <div class="img-container">
+          <img
+            src="../images/funcionalidades/gerenciador-pedidos.webp"
+            alt="Gerenciador de pedidos delivery do Sistema Yooga"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Funcionalidades 3 - Cupons -->
+    <section class="funcionalidades odd" id="cupons">
+      <div class="section-container funcionalidades-container">
+        <div class="text-container">
+          <h3>Cupons</h3>
+          <p>
+            Venda muito mais criando cupons exclusivos e segmentados para atrair
+            mais clientes no seu delivery.<span class="dots" id="dots-3"
+              >..</span
+            >
+            <span class="extra-text" id="extra-3"
+              >As promoções são automaticamente calculadas na hora de fechar os
+              pedidos.
+            </span>
+            <span class="ler" id="ler-3">Ler mais</span>
+          </p>
+        </div>
+
+        <div class="img-container">
+          <img
+            src="../images/funcionalidades/cupons.webp"
+            alt="Sistema de cupons para clientes"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Call-to-action box -->
+    <section class="cta">
+      <div class="section-container cta-container">
+        <p>
+          Entregas em menos tempo, maior controle sobre a experiência do usuário
+          e aumento nas vendas do restaurante
+        </p>
+        <h1>Teste por 7 dias <strong>GRATUITAMENTE</strong></h1>
+        <a
+          id="param9"
+          class="param button btn-experimente"
+          href="./quero-yooga"
+          onclick="dataLayer.push({'step': 'l3', 'event': 'tracking'});"
+        >
+          Testar agora!
+        </a>
+      </div>
+    </section>
+
+    <!-- Funcionalidade 4 - Programa Fidelidade -->
+    <section class="funcionalidades even" id="programa-fidelidade">
+      <div class="section-container funcionalidades-container">
+        <div class="text-container">
+          <h3>Programa Fidelidade</h3>
+          <p>
+            Descontos ou brindes personalizados nas próximas compras dos seus
+            clientes, mantendo eles fidelizados ao<span class="dots" id="dots-4"
+              >...</span
+            >
+            <span class="extra-text" id="extra-4">
+              seu restaurante.
+              <br />
+              Conecte-se com eles e garanta que sempre falem bem do seu negócio.
+            </span>
+            <span class="ler" id="ler-4">Ler mais</span>
+          </p>
+        </div>
+
+        <div class="img-container">
+          <img
+            src="../images/funcionalidades/fidelidade.webp"
+            alt="Programa de Fidelidade para seus clientes"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Funcionalidade 5 - Pagamento on-line -->
+    <section class="funcionalidades odd" id="pagamento-online">
+      <div class="section-container funcionalidades-container">
+        <div class="text-container">
+          <h3>Pagamento on-line</h3>
+          <p>
+            Os pagamentos acontecem on-line e assim que é feita a autorização de
+            pagamento pelo banco, a atualização cai no sistema.<span
+              class="dots"
+              id="dots-5"
+              >..</span
+            >
+            <br />
+            <span class="extra-text" id="extra-5">
+              Facilidade para seus clientes na hora de pagar, praticidade para
+              você na hora de receber.
+            </span>
+            <span class="ler" id="ler-5">Ler mais</span>
+          </p>
+        </div>
+
+        <div class="img-container">
+          <img
+            style="box-shadow: none;"
+            src="../images/funcionalidades/pagamento-online.webp"
+            alt="Cliente acessando QR Code do restaurante"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Call-to-action box -->
+    <section class="cta">
+      <div class="section-container cta-container">
+        <p>
+          Entregas em menos tempo, maior controle sobre a experiência do usuário
+          e aumento nas vendas do restaurante
+        </p>
+        <h1>Teste por 7 dias <strong>GRATUITAMENTE</strong></h1>
+        <a
+          id="param10"
+          class="param button btn-experimente"
+          href="../quero-yooga"
+          onclick="dataLayer.push({'step': 'l4', 'event': 'tracking'});"
+        >
+          Testar agora!
+        </a>
+      </div>
+    </section>
+
+    <!-- Funcionalidade 6 - Chat em tempo real -->
+    <section class="funcionalidades even" id="chat-tempo-real">
+      <div class="section-container funcionalidades-container">
+        <div class="text-container">
+          <h3>Chat em tempo real</h3>
+          <p>
+            Tenha um canal direto com os clientes que efetuaram os pedidos de
+            entrega. Para observações sobre determinado produto ou<span
+              class="dots"
+              id="dots-6"
+              >...</span
+            ><span class="extra-text" id="extra-6">
+              status do pedido, faça em tempo real com o Delivery Próprio Yooga.
+            </span>
+            <span class="ler" id="ler-6">Ler mais</span>
+          </p>
+        </div>
+
+        <div class="img-container">
+          <img
+            src="../images/funcionalidades/chat-delivery.webp"
+            alt="Chat com o cliente em tempo real"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Funcionalidade 7 - Raio de entrega -->
+    <section class="funcionalidades odd" id="raio-entrega">
+      <div class="section-container funcionalidades-container">
+        <div class="text-container">
+          <h3>Raio de entrega</h3>
+          <p>
+            Defina as regiões de entrega, com recortes personalizados de áreas
+            no mapa, estabelecendo<span class="dots" id="dots-7">...</span
+            ><span class="extra-text" id="extra-7"
+              >limites de bairros ou cidades. E indique a taxa de entrega de
+              acordo com as regiões definidas ou a distância.
+            </span>
+            <span class="ler" id="ler-7">Ler mais</span>
+          </p>
+        </div>
+
+        <div class="img-container">
+          <img
+            src="../images/funcionalidades/raio-entrega.webp"
+            alt="Defina o raio de entrega dos pedidos"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Funcionalidade 8 - Integração com marketplace -->
+    <section class="funcionalidades even" id="integracao-marketplace">
+      <div class="section-container funcionalidades-container">
+        <div class="text-container">
+          <h3>Integração com marketplace</h3>
+          <p>
+            Receba todos os pedidos de aplicativos terceirizados, como o iFood,
+            diretamente no seu<span class="dots" id="dots-8">...</span
+            ><span class="extra-text" id="extra-8"
+              >dashboard. A integração Yooga permite você acompanhar o pedido, a
+              produção e a entrega até o seu cliente.
+            </span>
+            <span class="ler" id="ler-8">Ler mais</span>
+          </p>
+        </div>
+
+        <div class="img-container">
+          <img
+            src="../images/funcionalidades/integracao-marketplace.webp"
+            alt="Defina o raio de entrega dos pedidos"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Relatos -->
+    <div class="wave-container relatos">
+      <img src="../images/funcionalidades/wave-2.svg" alt="" />
+    </div>
+    <section id="relatos">
+      <div class="section-container relatos-container">
+        <div class="text-container">
+          <div class="text">
+            <span class="quote-mark">❜❜</span>
+            <h1>
+              Entre os sistemas que eu pesquisei, foi o que teve melhor
+              atendimento. Eu consigo ter as projeções do mês seguinte, ver o
+              que saiu de cada item, poder inovar sabendo o que está vendendo ou
+              não.
+            </h1>
+            <small>GonGon Premium</small>
+          </div>
+          <a
+            id="param11"
+            class="param desktop-button button btn-experimente"
+            href="../quero-yooga"
+            onclick="dataLayer.push({'step': 'l5', 'event': 'tracking'});"
+          >
+            Testar agora!
+          </a>
+        </div>
+        <div class="img-container">
+          <img src="../images/clientes/gongon.webp" alt="Foto de cliente" />
+        </div>
+        <a
+          id="param12"
+          class="param mobile-button button btn-experimente"
+          href="../quero-yooga"
+          onclick="dataLayer.push({'step': 'l5', 'event': 'tracking'});"
+        >
+          Testar agora!
+        </a>
+      </div>
+    </section>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
+      <path
+        fill="#f6f6f6"
+        fill-opacity="1"
+        d="M0,96L60,85.3C120,75,240,53,360,53.3C480,53,600,75,720,85.3C840,96,960,96,1080,85.3C1200,75,1320,53,1380,42.7L1440,32L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+      ></path>
+    </svg>
+
+    <!-- Rodapé -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="offset-sm-1 col-sm-5 logo-container">
+            <a id="param13" class="param logo" href="../"
+              ><img src="../images/home/logo-primaria.svg" alt="Logotipo Yooga"
+            /></a>
+
+            <ul>
+              <li class="redes-sociais">
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/company/yoogatecnologia"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li class="redes-sociais">
+                <a
+                  target="_blank"
+                  href="https://www.youtube.com/channel/UCvjUM98AY2QxxL2Iq8dRrFw"
+                >
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+              <li class="redes-sociais">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/yoogatecnologia/"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li class="redes-sociais">
+                <a target="_blank" href="https://pt-br.facebook.com/beyooga/">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 offset-sm-1 col-sm-5 sobre footer-links">
+            <p>
+              <strong>SOBRE A YOOGA</strong>
+            </p>
+            <div class="row">
+              <div class="col-12 pb-3">
+                <a
+                  data-bs-toggle="collapse"
+                  href="#footerSolucoes"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="footerSolucoes"
+                  class="links footer-solucoes"
+                >
+                  Soluções
+                  <i
+                    style="margin-left: 6px"
+                    class="fas fa-chevron-down"
+                    aria-hidden="true"
+                  ></i>
+                </a>
+
+                <ul class="collapse" id="footerSolucoes">
+                  <li>
+                    <a id="param14" class="param" href="./gestao" class="links"> Gestão </a>
+                  </li>
+                  <li>
+                    <a id="param15" class="param" href="./delivery" class="links">
+                      Delivery
+                    </a>
+                  </li>
+                  <li>
+                    <a id="param16" class="param" href="./fiscal" class="links"> Fiscal </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-12 pb-3">
+                <a id="param17" class="param" href="../planos-precos" class="links"
+                  >Planos e Preços</a
+                >
+              </div>
+              <div class="col-12 pb-3">
+                <a
+                  href="https://yooga.com.br/blog/?utm_source=site-naveged&utm_medium=site-page&utm_campaign=blog2021&utm_content=cta-footer"
+                  class="links"
+                  >Blog</a
+                >
+              </div>
+              <div class="col-12 pb-3">
+                <a
+                  href="https://yooga.com.br/autonomo?utm_source=site-naveged&utm_medium=landing-page&utm_content=cta-footer"
+                  class="links"
+                  >Mercado Autônomo</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" style="overflow-x: hidden !important">
+        <div class="row faixa">
+          <div
+            class="
+              col-12
+              offset-md-1
+              col-md-5
+              offset-lg-4
+              col-lg-4
+              offset-xl-5
+              col-xl-3
+            "
+          >
+            <p>
+              Feito com amor por Yooga Tecnologia <i class="fas fa-heart"></i>
+            </p>
+          </div>
+          <div
+            class="
+              col-12
+              offset-md-1
+              col-md-5
+              offset-lg-1
+              col-lg-3
+              offset-xl-2
+              col-xl-2
+            "
+          >
+            <span class="links">
+              <i class="far fa-envelope"></i>
+              <a href="mailto: contato@yooga.com.br"> contato@yooga.com.br </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+
+    <!-- Typed.js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Bootstrap JS Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Jquery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Owl Carousel -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Yooga Scripts -->
+    <script src="../js/general.js?v=1.0"></script>
+    <script src="../js/solucoes.js?v=1.0"></script>
+
+  </body>
+</html>

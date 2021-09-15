@@ -1,0 +1,964 @@
+:root {
+  --main-pink: #f45b93;
+  --main-blue: #5ccaf4;
+  --brand-blue: #4ac4f3;
+  --dark-blue: #01273a;
+  --gray1: #f9f9f9;
+  --gray2: #e4ecef;
+  --gray3: #cacaca;
+}
+
+/* Sections Padding */
+#yooga-clientes,
+#yooga-funcionalidades,
+#yooga-relatos {
+  padding: 50px 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+}
+
+/* ---------------------------------- */
+
+/* HOME */
+
+/* ---------------------------------- */
+
+#yooga-home {
+  min-height: 640px;
+  background: var(--main-blue);
+  max-width: 100%;
+  padding-top: 140px;
+  position: relative;
+  overflow: hidden;
+}
+
+#yooga-home > .container-fluid {
+  padding: 0 90px;
+}
+
+#yooga-home h1,
+#yooga-home h2,
+#yooga-home p,
+#yooga-home span {
+  color: #fff;
+}
+
+#yooga-home .banner-img {
+  width: 110%;
+}
+
+#yooga-home .h1-container {
+  min-height: 150px;
+}
+
+#yooga-home .subtitulo {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+
+#yooga-home .btn-experimente {
+  align-self: flex-start;
+}
+
+.typed-cursor {
+  font-size: 2.5rem;
+  color: #007bff;
+}
+
+/* Ondas */
+#yooga-home::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 78px;
+  background: url(../images/home/banner-03.png) no-repeat 0 0;
+  background-size: cover;
+  display: inline-block;
+}
+
+.banner-text {
+  z-index: 9;
+  position: relative;
+  margin-top: 40px;
+}
+
+.banner-objects {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-objects .banner-objects-01 {
+  position: absolute;
+  left: 0;
+  bottom: -7%;
+  opacity: 0.1;
+}
+
+.banner-objects .banner-objects-02 {
+  position: absolute;
+  bottom: 45%;
+  left: -10%;
+  border: 15px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+}
+
+.banner-objects .banner-objects-03 {
+  position: absolute;
+  top: 0%;
+  right: -15%;
+  border: 30px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  height: 400px;
+  width: 400px;
+  overflow-x: hidden;
+}
+
+/* Animações dos elementos de fundo */
+.iq-fadebounce {
+  -webkit-animation-name: fadebounce;
+  -moz-animation-name: fadebounce;
+  -ms-animation-name: fadebounce;
+  -o-animation-name: fadebounce;
+  animation-name: fadebounce;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -ms-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+@-moz-keyframes fadebounce {
+  0% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    -moz-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadebounce {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-o-keyframes fadebounce {
+  0% {
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    -o-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  100% {
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadebounce {
+  0% {
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  100% {
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadebounce {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ---------------------------------- */
+
+/* CLIENTES */
+
+/* ---------------------------------- */
+
+#yooga-clientes {
+  background: #fff;
+}
+
+.cliente-logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.cliente-logo-container img {
+  opacity: 0.5;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  width: 156px;
+}
+
+.cliente-logo-container img:hover {
+  opacity: 1;
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+/* ---------------------------------- */
+
+/* FUNCIONALIDADES */
+
+/* ---------------------------------- */
+
+#yooga-funcionalidades .etapas {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+#yooga-funcionalidades .etapas a {
+  align-self: center;
+}
+
+#yooga-funcionalidades .etapas li {
+  color: #979797;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+#yooga-funcionalidades .etapas li + li {
+  margin-top: 30px;
+}
+
+#yooga-funcionalidades img {
+  position: relative;
+}
+
+/* Style the tab */
+#yooga-funcionalidades .tab {
+  border-left: 4px solid #e4ecef;
+}
+
+/* Style the buttons that are used to open the tab content */
+#yooga-funcionalidades .tab button {
+  display: block;
+  background-color: inherit;
+  color: #b9bec7;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+#yooga-funcionalidades .tab button:hover {
+  color: #7c828d;
+  margin-left: -6px;
+}
+
+/* Create an active/current "tab button" class */
+#yooga-funcionalidades .tab button.active {
+  border-left: 7px solid;
+  color: #292d34;
+  margin-left: -6px;
+}
+
+#yooga-funcionalidades .tablinks {
+  margin-bottom: 25px;
+  padding: 6px 0 6px 35px;
+}
+
+/* Style the tab content */
+#yooga-funcionalidades .tabcontent-desktop {
+  padding: 30px;
+  border-radius: 4px;
+  width: 100%;
+  max-height: 100%;
+  text-align: center;
+}
+
+#yooga-funcionalidades .tabcontent-desktop img {
+  max-width: 700px;
+
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+#yooga-funcionalidades .tabcontent-desktop p {
+  margin: 30px 50px 0;
+  text-align: center;
+  color: #fff;
+}
+
+#yooga-funcionalidades .tabpanel-1,
+#yooga-funcionalidades #fun-1 {
+  background: url(../images/home/dots.svg) repeat center/auto,
+    linear-gradient(270deg, #f67ca9 0, #f45b93 100%);
+  box-shadow: 0 25px 45px rgb(244 91 147 / 50%);
+}
+
+#yooga-funcionalidades .tablink-1.active {
+  border-color: #f45b93 !important;
+}
+
+#yooga-funcionalidades .tablink-1.active span {
+  color: #f45b93;
+}
+
+#yooga-funcionalidades .tabpanel-2,
+#yooga-funcionalidades #fun-2 {
+  background: url(../images/home/dots.svg) repeat center/auto,
+    linear-gradient(270deg, #354f74 0, #032351 100%);
+  box-shadow: 0 25px 45px rgb(3 35 81 / 50%);
+}
+
+#yooga-funcionalidades .tablink-2.active {
+  border-color: #032351 !important;
+}
+
+#yooga-funcionalidades .tablink-2.active span {
+  color: #032351;
+}
+
+#yooga-funcionalidades .tabpanel-3,
+#yooga-funcionalidades #fun-3 {
+  background: url(../images/home/dots.svg) repeat center/auto,
+    linear-gradient(270deg, #47b5eb 0, #19a1e6 100%);
+  box-shadow: 0 25px 45px rgb(25 161 230 / 50%);
+}
+
+#yooga-funcionalidades .tablink-3.active {
+  border-color: #19a1e6 !important;
+}
+
+#yooga-funcionalidades .tablink-3.active span {
+  color: #19a1e6;
+}
+
+#yooga-funcionalidades .tabpanel-4,
+#yooga-funcionalidades #fun-4 {
+  background: url(../images/home/dots.svg) repeat center/auto,
+    linear-gradient(270deg, #819ca9 0, #546e7a 100%);
+  box-shadow: 0 25px 45px rgb(84 110 122 / 50%);
+}
+
+#yooga-funcionalidades .tablink-4.active {
+  border-color: #546e7a !important;
+}
+
+#yooga-funcionalidades .tablink-4.active span {
+  color: #546e7a;
+}
+
+#yooga-funcionalidades .tabpanel-5,
+#yooga-funcionalidades #fun-5 {
+  background: url(../images/home/dots.svg) repeat center/auto,
+    linear-gradient(270deg, #7dd4f6 0, #5ccaf4 100%);
+  box-shadow: 0 25px 45px rgb(92 202 244 / 50%);
+}
+
+#yooga-funcionalidades .tablink-5.active {
+  border-color: #5ccaf4 !important;
+}
+
+#yooga-funcionalidades .tablink-5.active span {
+  color: #5ccaf4;
+}
+
+#yooga-funcionalidades .tabpanel-6,
+#yooga-funcionalidades #fun-6 {
+  background: url(../images/home/dots.svg) repeat center/auto,
+    linear-gradient(270deg, #191932 0, #00001b 100%);
+  box-shadow: 0 25px 45px rgb(0 0 27 / 50%);
+}
+
+#yooga-funcionalidades .tablink-6.active {
+  border-color: #00001b !important;
+}
+
+#yooga-funcionalidades .tablink-6.active span {
+  color: #00001b;
+}
+
+#yooga-funcionalidades .btn-experimente {
+  align-self: flex-start;
+}
+
+button:focus {
+  outline: 0px !important;
+}
+
+/* ---------------------------------- */
+
+/* RELATOS */
+
+/* ---------------------------------- */
+
+.relatos-carousel {
+  position: relative;
+  margin-top: 30px;
+}
+
+.relatos-carousel h2 {
+  font-size: 30px;
+  text-align: center;
+  color: #333333;
+  margin-bottom: 50px;
+}
+
+.relatos-carousel .owl-stage-outer {
+  padding: 30px 0;
+}
+
+.relatos-carousel .owl-dots {
+  text-align: center;
+}
+
+.relatos-carousel .owl-dots span {
+  position: relative;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: block;
+  background: #fff !important;
+  border: 3px solid #01b0f8;
+  margin: 0 5px;
+}
+
+.relatos-carousel .owl-dots .active {
+  box-shadow: none;
+}
+
+.relatos-carousel .owl-dots .active span {
+  background: #01b0f8;
+  box-shadow: none;
+  height: 12px;
+  width: 12px;
+  margin-bottom: -1px;
+}
+
+.relatos-carousel .center .cliente .card {
+  background: linear-gradient(180deg, #29b9df, #299ad6);
+}
+
+.relatos-carousel .center .cliente .card-body h5 {
+  color: #e4ecef;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+.relatos-carousel .center .cliente .card-body span {
+  color: #e4ecef;
+}
+
+.relatos-carousel .center .cliente .card-text {
+  color: #e4ecef;
+}
+
+.relatos-carousel .card {
+  background: #fff;
+  box-shadow: 0 8px 30px -7px #c9dff0;
+  margin: 0 20px;
+  padding: 0 10px;
+  border-radius: 20px;
+  border: 0;
+}
+
+.relatos-carousel .card .card-img-top {
+  max-width: 100px;
+  border-radius: 50%;
+  margin: 15px auto 0;
+  box-shadow: 0 8px 20px -4px #95abbb;
+  width: 100px;
+  height: 100px;
+}
+
+.relatos-carousel .card h5 {
+  color: #01b0f8;
+  font-size: 21px;
+  line-height: 1.3;
+}
+
+.relatos-carousel .card h5 span {
+  font-size: 18px;
+  color: #666666;
+}
+
+.relatos-carousel .card p {
+  font-size: 18px;
+  color: #555;
+  padding-bottom: 15px;
+}
+
+.relatos-carousel .active {
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+.relatos-carousel .center {
+  opacity: 1;
+}
+
+.relatos-carousel .center h5 {
+  font-size: 24px;
+}
+
+.relatos-carousel .center h5 span {
+  font-size: 20px;
+}
+
+.relatos-carousel .center .card-img-top {
+  max-width: 100%;
+  height: 120px;
+  width: 120px;
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+  outline: 0;
+}
+
+.owl-carousel button.owl-dot {
+  outline: 0;
+}
+
+.owl-prev i,
+.owl-next i {
+  font-size: 70px;
+  color: #ccc;
+  margin: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.owl-prev i:hover,
+.owl-next i:hover {
+  opacity: 0.8;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+  background: none !important;
+}
+
+.owl-prev {
+  width: 15px;
+  height: 100px;
+  position: absolute;
+  top: 40%;
+  margin-left: -40px !important;
+  display: block !important;
+  border: 0px solid black;
+}
+
+.owl-next {
+  width: 15px;
+  height: 100px;
+  position: absolute;
+  top: 40%;
+  right: -25px;
+  display: block !important;
+  border: 0px solid black;
+}
+
+/* ---------------------------------- */
+
+/* DIFERENCIAIS */
+
+/* ---------------------------------- */
+
+#yooga-diferenciais {
+  /* background: var(--main-blue); */
+  background: url(../images/home/curva-footer-home.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 70px 0;
+  height: auto;
+  color: #ffff;
+}
+
+#yooga-diferenciais img {
+  margin-right: 20px;
+  height: 55px;
+  width: 55px;
+}
+
+#yooga-diferenciais .item {
+  display: flex;
+}
+
+#yooga-diferenciais .texto {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+#yooga-diferenciais span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#yooga-diferenciais label {
+  font-size: 1rem;
+}
+
+#yooga-diferenciais .call-to-action {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+#yooga-diferenciais .call-to-action a {
+  width: 400px;
+  text-align: center;
+}
+
+/* ---------------------------------- */
+
+/* RESPONSIVO */
+
+/* ---------------------------------- */
+
+@media (max-width: 350px) {
+  /* #yooga-home .h1-container {
+    min-height: 200px !important;
+  } */
+
+  #yooga-home h1 {
+    font-size: 1.8rem !important;
+    line-height: 2.7rem !important;
+  }
+
+  #yooga-home .typed-cursor {
+    font-size: 1.8rem !important;
+    line-height: 2.7rem !important;
+  }
+}
+
+@media (max-width: 400px) {
+  #yooga-home .h1-container {
+    min-height: 150px;
+  }
+  #yooga-diferenciais .diferencial {
+    padding-left: 6%;
+  }
+
+  #yooga-diferenciais span {
+    font-size: 1.6rem !important;
+  }
+
+  #yooga-diferenciais label {
+    font-size: 1rem;
+  }
+
+  #yooga-diferenciais .call-to-action a {
+    width: 300px;
+    text-align: center;
+  }
+
+  #yooga-funcionalidades footer .footer-links {
+    padding-left: 6.5%;
+  }
+}
+
+@media (min-width: 430px) and (max-width: 767px) {
+  #yooga-home .h1-container {
+    min-height: 120px;
+  }
+}
+
+@media (max-width: 470px) {
+  #yooga-relatos h1 strong::before {
+    content: "\a";
+    white-space: pre;
+  }
+}
+
+@media (max-width: 575px) {
+  #yooga-clientes .cliente-logo-container img {
+    width: 110px;
+  }
+
+  #yooga-diferenciais {
+    height: auto;
+  }
+
+  #yooga-diferenciais .diferencial {
+    display: flex;
+    padding-left: 10%;
+  }
+
+  #yooga-diferenciais span {
+    font-size: 2rem;
+  }
+
+  #yooga-diferenciais label {
+    font-size: 1.25rem;
+  }
+
+  #yooga-diferenciais .diferencial + .diferencial {
+    margin-top: 40px;
+  }
+
+  #yooga-funcionalidades .tabcontent {
+    padding: 0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  #yooga-diferenciais .diferencial:nth-child(3),
+  #yooga-diferenciais .diferencial:nth-child(4) {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 767px) {
+  #yooga-clientes,
+  #yooga-funcionalidades,
+  #yooga-relatos {
+    padding: 40px 0;
+  }
+
+  #yooga-home {
+    padding: 0;
+    height: auto;
+  }
+
+  #yooga-home .container-fluid {
+    padding: 60px 10% 0;
+  }
+
+  #yooga-home h1 {
+    font-size: 2rem;
+    line-height: 3rem;
+    height: 280px;
+  }
+
+  .typed-cursor {
+    font-size: 2rem;
+  }
+
+  #yooga-home .subtitulo {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+
+  #yooga-home .button {
+    margin-bottom: 80px;
+    align-self: center;
+  }
+
+  #yooga-home .banner-img {
+    width: 105%;
+  }
+
+  #yooga-funcionalidades .responsive .image-steps {
+    display: none;
+  }
+
+  #yooga-funcionalidades .tab {
+    border-left: 1px solid #e9ebf0;
+  }
+
+  #yooga-funcionalidades .tabcontent-desktop img {
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+  }
+
+  #yooga-funcionalidades .btn-experimente {
+    align-self: center;
+  }
+
+  .relatos-carousel {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  #yooga-funcionalidades .tabcontent-mobile {
+    display: none;
+  }
+
+  #yooga-funcionalidades .tablinks.active + .tabcontent-mobile {
+    display: block;
+  }
+
+  #yooga-funcionalidades .image-steps {
+    display: none !important;
+  }
+
+  #yooga-funcionalidades .tabcontent-mobile {
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    transition: 0.5s ease-in-out;
+  }
+
+  #yooga-funcionalidades .tabcontent-mobile:last-of-type {
+    margin-bottom: 0;
+  }
+
+  #yooga-funcionalidades .tabcontent-mobile img {
+    border-radius: 5px;
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+  }
+
+  #yooga-funcionalidades .tabcontent-mobile p {
+    margin-top: 30px;
+    text-align: center;
+    color: #fff;
+  }
+
+  #yooga-funcionalidades .responsive button {
+    font-size: 1.15rem;
+  }
+
+  #yooga-funcionalidades #param2 {
+    align-self: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .tabcontent-mobile {
+    display: none !important;
+  }
+
+  #yooga-funcionalidades .tablinks:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 768px) and (max-width: 1120px) {
+  #yooga-home .h1-container {
+    min-height: 190px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1300px) {
+  #yooga-funcionalidades .image-steps img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1500px) {
+  #yooga-home .banner-img {
+    width: 115%;
+  }
+
+  #yooga-home .subtitulo {
+    font-size: 1.3rem;
+    line-height: 1.95rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  #yooga-diferenciais span {
+    font-size: 1.35rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  #yooga-home .text-container div:first-of-type {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #yooga-home {
+    min-height: 680px;
+    padding-top: 80px;
+  }
+}
+
+@media (min-width: 1920px) {
+  #yooga-home .banner-text {
+    margin: auto;
+  }
+
+  #yooga-home::after {
+    width: 102%;
+  }
+}
+
+@media (min-width: 2035px) {
+  #yooga-home .banner-img {
+    width: 100%;
+  }
+
+  #yooga-home .banner-objects-02 {
+    left: -5%;
+  }
+
+  #yooga-home .banner-objects-03 {
+    right: -10%;
+    top: 10%;
+  }
+
+  #yooga-diferenciais {
+    height: 480px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: 2210px) {
+  #yooga-home .banner-img {
+    width: 85%;
+  }
+}

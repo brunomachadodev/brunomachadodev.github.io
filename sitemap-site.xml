@@ -1,0 +1,109 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<!-- HOME -->
+<url>
+<loc>https://yooga.com.br/</loc>
+<lastmod>2021-05-13T16:17:22+00:00</lastmod>
+<priority>1.00</priority>
+</url>
+
+
+<!-- PLANOS E PREÇOS -->
+<url>
+<loc>https://yooga.com.br/planos-precos</loc>
+<lastmod>2021-05-18T13:51:47+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+
+
+<!-- SOLUÇÕES -->
+<url>
+<loc>https://yooga.com.br/solucoes</loc>
+<lastmod>2021-05-13T16:17:22+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+
+
+<!-- BLOG -->
+<url>
+<loc>https://yooga.com.br/blog</loc>
+<lastmod>2021-05-13T16:17:22+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+
+
+<!-- HOME AUTONOMO -->
+<url>
+<loc>https://yooga.com.br/autonomo</loc>
+<lastmod>2021-05-13T16:17:22+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+
+
+<!-- LOGIN DASHBOARD -->
+<url>
+<loc>https://yooga.com.br/empresa/login</loc>
+<lastmod>2021-02-25T17:43:40+00:00</lastmod>
+<priority>0.50</priority>
+</url>
+
+
+<!-- QUERO YOOGA -->
+<url>
+<loc>https://yooga.com.br/quero-yooga</loc>
+<lastmod>2021-05-13T16:17:22+00:00</lastmod>
+<priority>0.5</priority>
+</url>
+
+
+<!-- QUERO HONEST -->
+<url>
+<loc>https://yooga.com.br/quero-honest</loc>
+<lastmod>2021-05-13T16:17:22+00:00</lastmod>
+<priority>0.5</priority>
+</url>
+
+
+<!-- 40 SABORES - PEDIDO -->
+<url>
+<loc>http://www.yooga.com.br/40sabores</loc>
+<priority>0.4</priority>
+</url>
+
+
+<!-- PÁGINA DE AUTORES DO BLOG -->
+<url>
+<loc>https://yooga.com.br/blog/author/yooga/</loc>
+<lastmod>2021-05-13T16:17:22+00:00</lastmod>
+<priority>0.30</priority>
+</url>
+
+
+<!-- KAFUA -->
+<url>
+<loc>https://yooga.com.br/delivery/kafua/tabs/home</loc>
+<priority>0.1</priority>
+</url>
+
+
+<!-- SURAIA -->
+<url>
+<loc>https://yooga.com.br/delivery/salgados-suraia-matriz/tabs/home</loc>
+<priority>0.1</priority>
+</url>
+
+
+<!-- PÁGINA DE LOGIN SISTEMA -->
+<url>
+<loc>https://app.yooga.com.br/</loc>
+<priority>0.1</priority>
+</url>
+
+<!-- PÁGINA DE LOGIN SISTEMA -->
+<url>
+<loc>https://yooga.com.br/page-host</loc>
+<priority>0</priority>
+</url>
+
+</urlset>

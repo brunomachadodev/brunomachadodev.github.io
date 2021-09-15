@@ -1,0 +1,18 @@
+{
+  "name": "site_yooga",
+  "version": "1.7.0",
+  "description": "Site da lenda",
+  "author": "familia <cassianogf@gmail.com>",
+  "private": true,
+  "scripts": {
+    "setup-deploy": "git remote add deploy2 ssh://ubuntu@52.67.13.33/var/www/repos/site",
+    "deploy-mac": "npm run deploy-mac:git",
+    "deploy-mac:git": "git add -A ; git commit -m 'message' ; git push deploy2 master -f",
+    "deploy": "npm run deploy:git",
+    "deploy:git": "git add -A & git commit -m 'message' & git remote add deploy2 ssh://ubuntu@52.67.13.33/var/www/repos/site & git push deploy2 master -f"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}

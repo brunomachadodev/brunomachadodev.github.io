@@ -1,0 +1,73 @@
+/*
+
+Template: Sofbox - Responsive Software Landing Page
+Author: iqonicthemes.in
+Version: 1.0
+Design and Developed by: iqonicthemes.in
+
+NOTE: This is main stylesheet of template, This file contains the styling for the actual Template. Please do not change anything here! write in a custom.css file if required!
+
+*/
+
+/************************* selection *************************/
+*::-moz-selection { background: #9bc03c; color: #fff; text-shadow: none; }
+::-moz-selection { background: #9bc03c; color: #fff; text-shadow: none; }
+::selection { background: #9bc03c; color: #fff; text-shadow: none; }
+
+
+a { color: #333; }
+a:focus, a:hover { color: #9bc03c; }
+
+/*----------------------------------------------------------------------
+                        Buttons
+-----------------------------------------------------------------------*/
+.button {  background: #9bc03c;  }
+.iq-banner .iq-video {color: #9bc03c;}
+
+/* Buttons white */
+.button.bt-white:hover, .button.bt-white:focus { background: #9bc03c; }
+
+
+/*---------------------------------------------------------------------
+                           Section Title
+-----------------------------------------------------------------------*/
+.heading-title .title:before { background: #9bc03c; }
+
+
+/*---------------------------------------------------------------------
+                            Text Color 
+-----------------------------------------------------------------------*/
+.iq-works-box .icon-bg i, .iq-works-box .step, .iq-font-blue, .iq-amazing-tab .nav.nav-tabs li.active a i, .iq-amazing-tab .nav.nav-tabs li.active a:hover i, .iq-amazing-tab .nav.nav-tabs li.active a:focus i, .iq-amazing-tab .nav.nav-tabs li a:hover, .iq-amazing-tab .nav.nav-tabs li a:hover i, .iq-fancy-box .iq-icon, .iq-progress-bar-text, .iq-blog-detail a:hover, .iq-blog-detail  .blog-title a:hover h5, .iq-footer-box .iq-icon i, .counter-info .iq-video, .iq-breadcrumb .breadcrumb li.active, .iq-sidebar-widget .iq-widget-search i, .iq-widget-menu ul li a span:hover, .iq-widget-menu ul ul li a span:hover, .iq-sidebar-widget .iq-recent-post .media-body > a:hover, .iq-sidebar-widget .iq-recent-post .media-body span .fa, .iq-tags li a:hover, .iq-widget-archives li a:hover, .iq-comment-list .iq-comment-metadata i { color: #9bc03c; }
+
+/*---------------------------------------------------------------------
+                          Background Color 
+-----------------------------------------------------------------------*/
+.iq-amazing-tab .nav.nav-tabs li a:before, .iq-amazing-tab .nav.nav-tabs li a:hover:before, .iq-amazing-tab .nav.nav-tabs li a:focus:before, .iq-fancy-box:hover .iq-icon, .iq-client:before, .owl-carousel .owl-nav i:hover, .iq-team .share ul li a:hover, .iq-accordion .ad-title:before, .info-share li a:hover, #back-to-top .top:hover, .pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover, .pagination li a:focus, .pagination li a:hover, .pagination li span:focus, .pagination li span:hover, .iq-error h6, .blue-bg { background: #9bc03c; }
+
+header .menu-sticky {background: rgba(155, 192, 60, 0.9);}
+
+/*---------------------------------------------------------------------
+                       Background Gradient 
+---------------------------------------------------------------------*/
+.iq-over-blue-80:before { background: rgba(155, 192, 60, 0.8); }
+
+.iq-over-blue-90:before { background: rgba(155, 192, 60, 0.9); }
+
+.iq-team .iq-team-img:before {  background: rgba(155, 192, 60, 0); background: -moz-linear-gradient(top, rgba(155, 192, 60, 0) 0%, rgba(155, 192, 60, 1) 100%); background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(155, 192, 60, 0)), color-stop(100%, rgba(155, 192, 60, 1))); background: -webkit-linear-gradient(top, rgba(155, 192, 60, 0) 0%, rgba(155, 192, 60, 1) 100%); background: -o-linear-gradient(top, rgba(155, 192, 60, 0) 0%, rgba(155, 192, 60, 1) 100%); background: -ms-linear-gradient(top, rgba(155, 192, 60, 0) 0%, rgba(155, 192, 60, 1) 100%); background: linear-gradient(to bottom, rgba(155, 192, 60, 0) 0%, rgba(155, 192, 60, 1) 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9bc03c', endColorstr='#9bc03c', GradientType=0); }
+
+
+
+/*---------------------------------------------------------------------
+                      		 Boder Color 
+---------------------------------------------------------------------*/
+.iq-objects .iq-objects-04, .iq-objects-software .iq-objects-03, .iq-objects-asked .iq-objects-03, .info-share li a:hover, .pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover, .pagination li a:focus, .pagination li a:hover, .pagination li span:focus, .pagination li span:hover, .contact-form .section-field input:focus, .contact-form .section-field.textarea textarea:focus, .iq-sidebar-widget .iq-widget-search input:focus, .iq-tags li a:hover, blockquote { border-color: #9bc03c; }
+
+
+@media(max-width:767px) {
+header .navbar-default .navbar-toggle .icon-bar, header .navbar-default .navbar-nav > li > a:hover, header .navbar-default .navbar-nav > li > a:focus, header .navbar-default .navbar-nav > li.active > a, header .navbar-default .navbar-nav > li.active > a:focus, header .navbar-default .navbar-nav > li.active > a:hover {
+    background: #9bc03c;
+}
+
+
+
+ }
