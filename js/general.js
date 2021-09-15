@@ -42,16 +42,22 @@ btnMobile?.addEventListener("click", toggleMenu);
 btnMobile?.addEventListener("touchstart", toggleMenu);
 
 // Dropdown Soluções
+
 $(".dropdown").hover(
-  function () {
-    $(".dropdown-toggle").addClass("show");
-    $(".dropdown-menu").addClass("show");
-  },
-  function () {
-    $(".dropdown-toggle").removeClass("show");
-    $(".dropdown-menu").removeClass("show");
-  }
-);
+
+    function () {
+      if (screen.width > 991){
+      $(".dropdown-toggle").addClass("show");
+      $(".dropdown-menu").addClass("show");
+    }
+    },
+    function () {
+      if (screen.width > 991){
+      $(".dropdown-toggle").removeClass("show");
+      $(".dropdown-menu").removeClass("show");
+    }}
+    );
+  
 
 // UTM params
 $(document).ready(function () {
