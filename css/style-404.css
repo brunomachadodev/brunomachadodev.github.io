@@ -224,27 +224,6 @@ Section padding
 /*---------------------------------------------------------------------
                             Header
 -----------------------------------------------------------------------*/
-header { position: fixed; display: inline-block; width: 100%; top: 0; left: 0; z-index: 999; transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; }
-header .container-fluid { padding: 0 100px; }
-header .navbar-brand img { height: 60px; transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; }
-header .navbar-default { background: none; border: none; border-radius: 0px; min-height: inherit; margin: 0; padding: 20px 0; }
-header .navbar-default .navbar-brand { height: inherit; padding: 0; }
-header .navbar-nav { margin-top: 7px; transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; }
-header .navbar-nav > li { margin: 0 30px 0 0; }
-header .navbar-nav > li:last-child { margin-right: 0; }
-header .navbar-default .navbar-nav > li > a { color: #ffffff; padding: 10px 0; font-size: 16px; }
-header .navbar-nav > li a { position: relative; }
-header .navbar-default .navbar-nav > li > a:hover, header .navbar-default .navbar-nav > li > a:focus, header .navbar-default .navbar-nav > li.active > a, header .navbar-default .navbar-nav > li.active > a:focus, header .navbar-default .navbar-nav > li.active > a:hover { color: #fff; background: none; box-shadow: none; }
-header .navbar-nav > li a::before { background: #fff; bottom: 0; content: ""; height: 2px; left: 0; position: absolute; width: 0; transition: all 0.3s ease-out 0s; }
-header .navbar-nav > li.active > a::before, header .navbar-nav > li:hover > a::before, header .navbar-nav > li > a:hover::before { width: 100%; }
-header .button { margin-top: 0; margin-left: 60px; }
-
-/* Header sticky */
-header .menu-sticky { -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1); box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1); background: rgba(74, 196, 243, 0.9); }
-header .menu-sticky .navbar-header .navbar-brand img { height: 45px; }
-header .menu-sticky.navbar-default { padding: 13px 0; }
-header .menu-sticky .navbar-nav { margin-top: 0; }
-header .menu-sticky .button { margin-top: 0px; }
 
 /*---------------------------------------------------------------------
                             Banner
@@ -739,7 +718,7 @@ width: 100%;
   background-color: #f45b93 !important; 
   color: white !important; 
   border: 3px solid #f45b93 !important; 
-  margin-top: -10px !important; 
+  /* margin-top: -10px !important;  */
   margin-left: 0 !important;
 }
 

@@ -402,6 +402,10 @@ footer .logo-container ul {
     overflow-y: auto;
   }
 
+  header nav a img {
+    margin-left: 0;
+  }
+
   header .dropdown-icon {
     height: 1.3rem;
   }

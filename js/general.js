@@ -12,7 +12,7 @@ $(window).scroll(() => {
     }
   } else {
     if ($(window).scrollTop() > 40) {
-      $("#yooga-header").css("background", () => (url.includes('autonomo') || url.includes('honest') ? 'rgba(1,39,58, 0.95)' : 'rgba(74, 196, 243, 0.96)'));
+      $("#yooga-header").css("background", () => (url.includes('autonomo') || url.includes('honest') || url.includes(404) ? 'rgba(1,39,58, 0.95)' : 'rgba(74, 196, 243, 0.96)'));
       $("#yooga-header").css("box-shadow", "0px 0px 30px 0px rgb(0 0 0 / 10%)");
     } else {
       $("#yooga-header").css("background", "transparent");
