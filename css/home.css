@@ -322,6 +322,12 @@ h2 {
   padding: 6px 0 6px 35px;
 }
 
+#yooga-funcionalidades .tablinks h2 {
+  font-size: 1.15rem;
+  line-height: 1rem;
+  font-weight: 600;
+}
+
 /* Style the tab content */
 #yooga-funcionalidades .tabcontent-desktop {
   padding: 30px;
@@ -339,7 +345,7 @@ h2 {
 }
 
 #yooga-funcionalidades .tabcontent-desktop p {
-  margin: 30px 50px 0;
+  margin: 30px 90px 0;
   text-align: center;
   color: #fff;
 }
@@ -647,13 +653,14 @@ button:focus {
   flex-direction: column;
 }
 
-#yooga-diferenciais span {
+#yooga-diferenciais .title {
   font-size: 1.5rem;
   font-weight: 700;
 }
 
-#yooga-diferenciais label {
+#yooga-diferenciais .subtext {
   font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 #yooga-diferenciais .call-to-action {
@@ -697,12 +704,13 @@ button:focus {
     padding-left: 6%;
   }
 
-  #yooga-diferenciais span {
+  #yooga-diferenciais .title {
     font-size: 1.6rem !important;
   }
 
-  #yooga-diferenciais label {
+  #yooga-diferenciais .subtext {
     font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   #yooga-diferenciais .call-to-action a {
@@ -742,12 +750,13 @@ button:focus {
     padding-left: 10%;
   }
 
-  #yooga-diferenciais span {
+  #yooga-diferenciais .title {
     font-size: 2rem;
   }
 
-  #yooga-diferenciais label {
+  #yooga-diferenciais .subtext {
     font-size: 1.25rem;
+    line-height: 1.875rem;
   }
 
   #yooga-diferenciais .diferencial + .diferencial {
@@ -858,6 +867,7 @@ button:focus {
 
   #yooga-funcionalidades .tabcontent-mobile p {
     margin-top: 30px;
+    margin-bottom: 10px;
     text-align: center;
     color: #fff;
   }
@@ -908,8 +918,16 @@ button:focus {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
-  #yooga-diferenciais span {
+  #yooga-diferenciais .title {
     font-size: 1.35rem;
+  }
+
+  #yooga-funcionalidades .tablinks h2 {
+    font-size: 1rem;
+  }
+
+  #yooga-funcionalidades .tabcontent-desktop p {
+    margin: 30px 50px 0;
   }
 }
 

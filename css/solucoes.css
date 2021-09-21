@@ -96,7 +96,7 @@ section:not(#yooga-home) .section-container {
   border-right: 5px solid #01273a;
 }
 
-.funcionalidades h3 {
+.funcionalidades h2 {
   font-weight: 600;
   color: #01273a;
   font-size: 1.5rem;
@@ -290,7 +290,7 @@ footer {
     max-width: 1000px;
   }
 
-  .funcionalidades h3 {
+  .funcionalidades h2 {
     font-size: 1.75rem;
   }
   .extra-text {
@@ -414,15 +414,15 @@ footer {
 
 @media screen and (min-width: 900px) {
   #yooga-home {
-    padding: 6rem 1.75rem 2rem 1.75rem
+    padding: 6rem 1.75rem 2rem 1.75rem;
   }
-  
+
   .text-container {
     justify-content: flex-start;
   }
 
-  .funcionalidades h3 {
-    margin: 1rem 0
+  .funcionalidades h2 {
+    margin: 1rem 0;
   }
 }
 
@@ -440,9 +440,7 @@ footer {
     font-size: 1rem;
   }
 
-  
-
-  .funcionalidades h3 {
+  .funcionalidades h2 {
     font-size: 2rem;
     margin: 1.25rem 0;
   }

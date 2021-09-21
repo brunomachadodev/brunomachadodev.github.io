@@ -45,7 +45,7 @@ h1 {
 
 #yooga-header {
   position: fixed;
-  width: 100%;
+  width: 101%;
   top: 0;
   left: 0;
   z-index: 999;
@@ -176,7 +176,6 @@ header #menu .dropdown-item:hover {
   color: #1e2125;
   background-color: #eceff1;
 }
-
 
 header #menu .dropdown-item.active {
   background-color: rgb(3, 35, 81);
@@ -320,7 +319,7 @@ footer .faixa {
 }
 
 footer .faixa a {
-  color: var(--dark-blue)
+  color: var(--dark-blue);
 }
 
 footer .faixa span,
@@ -400,10 +399,6 @@ footer .logo-container ul {
     height: calc(100vh - 60px);
     visibility: visible;
     overflow-y: auto;
-  }
-
-  header nav a img {
-    margin-left: 0;
   }
 
   header .dropdown-icon {
@@ -586,8 +581,6 @@ footer .logo-container ul {
     line-height: 1.5rem;
     align-self: flex-start;
   }
-
-  
 
   header #menu .dropdown-item h3 {
     font-size: 0.9375rem;
