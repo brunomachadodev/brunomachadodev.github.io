@@ -3291,7 +3291,7 @@ let produtosObj = [
     ],
   },
   {
-    negocio: "Açogue",
+    negocio: "Açougue",
     categorias: [
       {
         descricao: "Cortes bovinos",
