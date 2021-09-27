@@ -17,10 +17,26 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 </url>
 
 
-<!-- SOLUÇÕES -->
+<!-- SOLUÇÕES - GESTÃO -->
 <url>
-<loc>https://yooga.com.br/solucoes</loc>
-<lastmod>2021-05-13T16:17:22+00:00</lastmod>
+<loc>https://yooga.com.br/solucoes/gestao</loc>
+<lastmod>2021-09-24T15:09:22+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+
+
+<!-- SOLUÇÕES - DELIVERY -->
+<url>
+<loc>https://yooga.com.br/solucoes/delivery</loc>
+<lastmod>2021-09-24T15:09:22+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+
+
+<!-- SOLUÇÕES - FISCAL -->
+<url>
+<loc>https://yooga.com.br/solucoes/fiscal</loc>
+<lastmod>2021-09-24T15:09:22+00:00</lastmod>
 <priority>0.80</priority>
 </url>
 
@@ -32,12 +48,19 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <priority>0.80</priority>
 </url>
 
+<!-- QUERO YOOGA -->
+<url>
+<loc>https://yooga.com.br/quero-yooga</loc>
+<lastmod>2021-09-24T15:09:22+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+
 
 <!-- HOME AUTONOMO -->
 <url>
 <loc>https://yooga.com.br/autonomo</loc>
-<lastmod>2021-05-13T16:17:22+00:00</lastmod>
-<priority>0.80</priority>
+<lastmod>2021-09-24T15:09:22+00:00</lastmod>
+<priority>0.50</priority>
 </url>
 
 
@@ -46,14 +69,6 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <loc>https://yooga.com.br/empresa/login</loc>
 <lastmod>2021-02-25T17:43:40+00:00</lastmod>
 <priority>0.50</priority>
-</url>
-
-
-<!-- QUERO YOOGA -->
-<url>
-<loc>https://yooga.com.br/quero-yooga</loc>
-<lastmod>2021-05-13T16:17:22+00:00</lastmod>
-<priority>0.5</priority>
 </url>
 
 

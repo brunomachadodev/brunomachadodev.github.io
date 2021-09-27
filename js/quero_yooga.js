@@ -10,10 +10,27 @@ var secondStep = false;
 var thirdStep = false;
 let already = false;
 
+let clientUserAgent = navigator.userAgent;
+
 var utm;
 
 // const urlSite = "http://localhost:3333/";
 const urlSite = "https://marketing.yooga.com.br/";
+
+function create_UUID() {
+  var dt = new Date().getTime();
+  var uuid = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
+    /[xy]/g,
+    function (c) {
+      var r = (dt + Math.random() * 16) % 16 | 0;
+      dt = Math.floor(dt / 16);
+      return (c == "x" ? r : (r & 0x3) | 0x8).toString(16);
+    }
+  );
+  return uuid;
+}
+
+window.onload = localStorage.setItem("eventId", create_UUID());
 
 let produtosObj = [
   {
@@ -4097,6 +4114,20 @@ $(".last").click(function () {
           //
         },
       });
+
+      $.ajax({
+        type: "POST",
+        url: `${urlSite}lead/conversionApi`,
+        data: {
+          event_name: "Opportunity",
+          event_url: "https://yooga.com.br/quero-yooga",
+          event_id: `${localStorage.getItem("eventId")}`,
+          event_time: `${Math.floor(new Date().getTime() / 1000)}`,
+          email: $("#email").val(),
+          phone: $("#phone").val(),
+          client_user_agent: clientUserAgent,
+        },
+      });
     }
 
     animateNext($(this));
@@ -4270,6 +4301,12 @@ $("#negocio").on("change", function (event) {
 // Validation
 //===========================================================
 
+function validateEmail(email) {
+  const re =
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
 function isFirstStepValid() {
   let name = $("#name").val();
   let email = $("#email").val();
@@ -4311,6 +4348,11 @@ function isFirstStepValid() {
     (phoneClear === "11111111111") |
     (phoneClear === "00000000000")
   ) {
+    document.getElementById("WrongPhone").style.display = "block";
+    return false;
+  }
+
+  if (!validateEmail(email)) {
     document.getElementById("WrongPhone").style.display = "block";
     return false;
   }

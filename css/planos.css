@@ -722,12 +722,12 @@ width: 100%;
   }
 
   .func-box {
-    padding-left: 10px !important;
+    padding-left: 5px !important;
   }
 
   .f-14-mobile {
-    font-size: 12px !important;
-    text-align: left !important;
+    font-size: 10px !important;
+    text-align: center !important;
     padding: 0 !important;
   }
 
@@ -902,7 +902,7 @@ width: 100%;
   border-radius: 15px;
   text-align: center;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 66px;
   max-width: 320px;
   margin-bottom: 20px;
 }
@@ -945,9 +945,23 @@ width: 100%;
   margin-right: 35px;
 }
 
+.plano-subtitle-box p {
+  color: #979797;
+  font-size: 16px;
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+
 .plano-subtitle {
   color: #979797;
   font-size: 14px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.plano-subtitle li i {
+  font-size: 12px;
+  margin: 0 8px 0 0;
 }
 
 .plano-especialista-btn {
@@ -960,7 +974,12 @@ width: 100%;
   background-color: white;
   margin-top: 10px;
   cursor: pointer;
+  transition: 0.3s;
+}
 
+.plano-especialista-btn:hover {
+  color: #a7355f !important;
+  border-color: #a7355f !important;
 }
 
 .plano-footer {
@@ -994,20 +1013,32 @@ width: 100%;
   background-color: #F45B93 !important;
 }
 
+.plano-especialista-btn.popular:hover {
+  background-color: #a7355f !important;
+}
+
+.func-box.item{
+  padding-left: 25px;
+}
+
 .func-box {
   padding-top: 18px;
   padding-bottom: 18px;
   background-color: #5CCAF4;
   color: white;
-  padding-left: 25px;
+  
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .func-box.azul-claro {
   background-color: rgba(92, 202, 244, 0.25);
   color: #01273A;
   text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -1077,14 +1108,37 @@ width: 100%;
   color: white !important
 }
 
+@media (max-width: 340px) {
+  .func-box {
+    font-size: 12px;
+  }
+
+  .plano-toggle-title {
+    font-size: 14px;
+  }
+}
+
 
 @media (max-width: 601px) {
+  .heading-title {
+    margin-bottom: 60px;
+  }
+
   .text-center-mobile {
     text-align: center;
   }
 
+  .plano-box,
+  .plano-box.popular {
+    margin-top: 20px !important;
+  }
+
   .plano-toggle-box {
     bottom: -60px;
+  }
+
+  .f-14-mobile {
+    margin-bottom: 14px !important;
   }
 
   .parceiro-text {
@@ -1093,6 +1147,25 @@ width: 100%;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 602px) and (max-width: 992px) {
+  .heading-title {
+    margin-bottom: 40px;
+  }
+  
+  .plano-box,
+  .plano-box.popular {
+    margin-top: 30px !important;
+  }
+
+  .plano-toggle-box {
+    bottom: -40px;
+  }
+
+  .f-14-mobile {
+    font-size: 18px !important;
   }
 }
 
