@@ -6,6 +6,9 @@ let clientUserAgent = navigator.userAgent;
 
 var utm;
 
+// const urlSite = "http://localhost:3333/";
+const urlSite = "https://marketing.yooga.com.br/";
+
 function create_UUID() {
   var dt = new Date().getTime();
   var uuid = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
@@ -63,26 +66,39 @@ $(document).ready(function () {
   $('[data-toggle="tooltip"]').tooltip();
 
   // Code for the Validator
-  // var $validator = $(".wizard-card form").validate({
-  //   rules: {
-  //     name: {
-  //       required: true,
-  //       minlength: 3,
-  //     },
-  //     lastname: {
-  //       required: true,
-  //       minlength: 3,
-  //     },
-  //     email: {
-  //       required: true,
-  //       minlength: 3,
-  //     },
-  //   },
+  var $validator = $(".wizard-card form").validate({
+    rules: {
+      name: {
+        required: false,
+        minlength: 3,
+      },
+      lastname: {
+        required: false,
+        minlength: 3,
+      },
+      email: {
+        required: false,
+        minlength: 3,
+      },
+      company: {
+        required: false,
+        minlength: 3,
+      },
+      modeloNegocio: {
+        required: false,
+      },
+      faturamentoMensal: {
+        required: false,
+      },
+      tempoAtividade: {
+        required: false,
+      },
+    },
 
-  //   errorPlacement: function (error, element) {
-  //     $(element).parent("div").addClass("has-error");
-  //   },
-  // });
+    errorPlacement: function (error, element) {
+      $(element).parent("div").addClass("has-error");
+    },
+  });
 
   // Wizard Initialization
   $(".wizard-card").bootstrapWizard({
@@ -143,20 +159,20 @@ $(document).ready(function () {
         $(".moving-tab").text(button_text);
       }, 150);
 
-      var checkbox = $(".footer-checkbox");
+      // var checkbox = $(".footer-checkbox");
 
-      if (!index == 0) {
-        $(checkbox).css({
-          opacity: "0",
-          visibility: "hidden",
-          position: "absolute",
-        });
-      } else {
-        $(checkbox).css({
-          opacity: "1",
-          visibility: "visible",
-        });
-      }
+      // if (!index == 0) {
+      //   $(checkbox).css({
+      //     opacity: "0",
+      //     visibility: "hidden",
+      //     position: "absolute",
+      //   });
+      // } else {
+      //   $(checkbox).css({
+      //     opacity: "1",
+      //     visibility: "visible",
+      //   });
+      // }
 
       refreshAnimation($wizard, index);
     },
@@ -167,52 +183,77 @@ $(document).ready(function () {
   //     readURL(this);
   //   });
 
-  $('[data-toggle="wizard-radio"]').click(function () {
-    wizard = $(this).closest(".wizard-card");
-    wizard.find('[data-toggle="wizard-radio"]').removeClass("active");
-    $(this).addClass("active");
-    $(wizard).find('[type="radio"]').removeAttr("checked");
-    $(this).find('[type="radio"]').attr("checked", "true");
-  });
+  // $('[data-toggle="wizard-radio"]').on("click", function () {
+  //   wizard = $(this).closest(".wizard-card");
+  //   wizard.find('[data-toggle="wizard-radio"]').removeClass("active");
+  //   $(this).addClass("active");
+  //   $(wizard).find('[type="radio"]').removeAttr("checked");
+  //   $(this).find('[type="radio"]').attr("checked", "true");
+  // });
 
-  $('[data-toggle="wizard-checkbox"]').click(function () {
-    if ($(this).hasClass("active")) {
-      $(this).removeClass("active");
-      $(this).find('[type="checkbox"]').removeAttr("checked");
-    } else {
-      $(this).addClass("active");
-      $(this).find('[type="checkbox"]').attr("checked", "true");
-    }
-  });
+  // $('[data-toggle="wizard-checkbox"]').on('click', function () {
+  //   if ($(this).hasClass("active")) {
+  //     $(this).removeClass("active");
+  //     $(this).find('[type="checkbox"]').removeAttr("checked");
+  //   } else {
+  //     $(this).addClass("active");
+  //     $(this).find('[type="checkbox"]').attr("checked", "true");
+  //   }
+  // });
 
   $(".set-full-height").css("height", "auto");
 });
 
-//Function to show image before upload
+// $('[data-toggle=wizard-checkbox]').each(function(){
+//   this.onclick = function () {
+//     if ($(this).hasClass("active")) {
+//       $(this).removeClass("active");
+//       $(this).find('[type="checkbox"]').removeAttr("checked");
+//     } else {
+//       $(this).addClass("active");
+//       $(this).find('[type="checkbox"]').attr("checked", "true");
+//     }
+//   }
+// });
 
-function readURL(input) {
-  if (input.files && input.files[0]) {
-    var reader = new FileReader();
-
-    reader.onload = function (e) {
-      $("#wizardPicturePreview").attr("src", e.target.result).fadeIn("slow");
+document
+  .querySelector("[data-toggle=wizard-checkbox]")
+  .addEventListener("click", function () {
+    this.onclick = function () {
+      if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
+        $(this).find('[type="checkbox"]').removeAttr("checked");
+      } else {
+        $(this).addClass("active");
+        $(this).find('[type="checkbox"]').attr("checked", "true");
+      }
     };
-    reader.readAsDataURL(input.files[0]);
-  }
-}
-
-$(window).resize(function () {
-  $(".wizard-card").each(function () {
-    $wizard = $(this);
-
-    index = $wizard.bootstrapWizard("currentIndex");
-    refreshAnimation($wizard, index);
-
-    $(".moving-tab").css({
-      transition: "transform 0s",
-    });
   });
-});
+
+//Function to show image before upload
+// function readURL(input) {
+//   if (input.files && input.files[0]) {
+//     var reader = new FileReader();
+
+//     reader.onload = function (e) {
+//       $("#wizardPicturePreview").attr("src", e.target.result).fadeIn("slow");
+//     };
+//     reader.readAsDataURL(input.files[0]);
+//   }
+// }
+
+// $(window).resize(function () {
+//   $(".wizard-card").each(function () {
+//     $wizard = $(this);
+
+//     index = $wizard.bootstrapWizard("currentIndex");
+//     refreshAnimation($wizard, index);
+
+//     $(".moving-tab").css({
+//       transition: "transform 0s",
+//     });
+//   });
+// });
 
 function refreshAnimation($wizard, index) {
   $total = $wizard.find(".nav li").length;
@@ -313,6 +354,41 @@ document.getElementById("trial-button").addEventListener("click", () => {
   document.getElementById("trial-button").style.display = "none";
   document.getElementById("finishing-choices").style.display = "none";
 });
+
+const sistemaGestao = document.querySelector("#choice-sistema-gestao");
+const delivery = document.querySelector("#choice-delivery");
+
+// sistemaGestao.addEventListener("click", function () {
+//   sistemaGestao.classList.toggle("active");
+//   if (this.classList.contains("active")) {
+//     this.classList.remove("active");
+//           $(this).find('[type="checkbox"]').removeAttr("checked");
+//   } else {
+//     this.classList.add("active");
+//           $(this).find('[type="checkbox"]').attr("checked", "true");
+//   }
+//   console.log("click no gestao");
+// });
+
+function setActive(event) {
+  console.log('Evento: ' + event)
+  if (event.type === "touchstart") event.preventDefault();
+  const choice = document.querySelector('#choice-delivery')
+  choice.classList.toggle("active")
+  const active = choice.classList.contains("active")
+  console.log(active)
+}
+
+delivery.addEventListener("click", setActive
+// () => {
+//   if (event.type === "touchstart") event.preventDefault();
+//   console.log("click no delivery");
+//   delivery.classList.toggle("active")
+// }
+);
+// document.querySelector("#choice-fiscal").addEventListener("click", () => {
+//   console.log("click no fiscal");
+// });
 
 let produtosObj = [
   {

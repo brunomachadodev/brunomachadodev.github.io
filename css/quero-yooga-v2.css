@@ -1348,6 +1348,9 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
     text-align: start;
     margin: 15px 0 20px;
   }
+  #inside-sale-step .info-text {
+    text-align: center;
+  }
   .main .container {
     margin-bottom: 50px; } }
 @media (min-width: 768px) {
@@ -1536,7 +1539,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
   border: 2px solid #BDBDBD;
   color: #BDBDBD;
   border-radius: 50%;
-  padding: 1px 6px;
+  padding: 0px 6px;
   line-height: normal;
   cursor: help;
 }
