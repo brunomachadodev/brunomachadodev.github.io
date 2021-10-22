@@ -70,33 +70,33 @@ $(document).ready(function () {
   var $validator = $(".wizard-card form").validate({
     rules: {
       name: {
-        required: true,
+        required: false,
         minlength: 3,
       },
       lastname: {
-        required: true,
+        required: false,
         minlength: 3,
       },
       email: {
-        required: true,
+        required: false,
         minlength: 3,
-        email: true,
+        email: false,
       },
       company: {
-        required: true,
+        required: false,
         minlength: 3,
       },
       businessModel: {
-        required: true,
+        required: false,
       },
       monthlyRevenue: {
-        required: true,
+        required: false,
       },
       uptime: {
-        required: true,
+        required: false,
       },
       systemChoices: {
-        required: true,
+        required: false,
         minlength: 1,
       },
     },
