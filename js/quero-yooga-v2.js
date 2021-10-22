@@ -6,6 +6,8 @@ var firstStep = false;
 var secondStep = false;
 var thirdStep = false;
 
+var businessModel;
+
 const clientUserAgent = navigator.userAgent;
 
 var utm = null;
