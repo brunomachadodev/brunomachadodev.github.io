@@ -178,8 +178,8 @@ var bootstrapWizardCreate = function(element, options) {
 		$item.remove();
 	};
 
+	// Get the index of the clicked tab
 	var innerTabClick = function (e) {
-		// Get the index of the clicked tab
 		var clickedIndex = $navigation.find(baseItemSelector).index($(e.currentTarget).parent(baseItemSelector));
 		if($settings.onTabClick && typeof $settings.onTabClick === 'function' && $settings.onTabClick($activeTab, $navigation, obj.currentIndex(), clickedIndex)===false){
 			return false;

@@ -61,11 +61,8 @@ $("#inside-sale-playlist").click(function () {
 
 $(document).ready(function () {
   $.material.init();
-
-  /*  Activate the tooltips      */
   $('[data-toggle="tooltip"]').tooltip();
 
-  // Code for the Validator
   var $validator = $(".wizard-card form").validate({
     rules: {
       name: {
@@ -100,7 +97,6 @@ $(document).ready(function () {
     },
   });
 
-  // Wizard Initialization
   $(".wizard-card").bootstrapWizard({
     tabClass: "nav nav-pills",
     nextSelector: ".btn-next",
@@ -115,7 +111,6 @@ $(document).ready(function () {
     },
 
     onInit: function (tab, navigation, index) {
-      //check number of tabs and fill the entire row
       var $total = navigation.find("li").length;
       var $wizard = navigation.closest(".wizard-card");
 
@@ -144,7 +139,6 @@ $(document).ready(function () {
 
       var $wizard = navigation.closest(".wizard-card");
 
-      // If it's the last tab then hide the last button and show the finish instead
       if ($current >= $total) {
         $($wizard).find(".btn-next").hide();
         // $($wizard).find(".btn-finish").show();
@@ -158,63 +152,56 @@ $(document).ready(function () {
       setTimeout(function () {
         $(".moving-tab").text(button_text);
       }, 150);
-
-      // var checkbox = $(".footer-checkbox");
-
-      // if (!index == 0) {
-      //   $(checkbox).css({
-      //     opacity: "0",
-      //     visibility: "hidden",
-      //     position: "absolute",
-      //   });
-      // } else {
-      //   $(checkbox).css({
-      //     opacity: "1",
-      //     visibility: "visible",
-      //   });
-      // }
-
       refreshAnimation($wizard, index);
     },
   });
-
-  // Prepare the preview for profile picture
-  //   $("#wizard-picture").change(function () {
-  //     readURL(this);
-  //   });
-
-  // $('[data-toggle="wizard-radio"]').on("click", function () {
-  //   wizard = $(this).closest(".wizard-card");
-  //   wizard.find('[data-toggle="wizard-radio"]').removeClass("active");
-  //   $(this).addClass("active");
-  //   $(wizard).find('[type="radio"]').removeAttr("checked");
-  //   $(this).find('[type="radio"]').attr("checked", "true");
-  // });
-
-  // $('[data-toggle="wizard-checkbox"]').on('click', function () {
-  //   if ($(this).hasClass("active")) {
-  //     $(this).removeClass("active");
-  //     $(this).find('[type="checkbox"]').removeAttr("checked");
-  //   } else {
-  //     $(this).addClass("active");
-  //     $(this).find('[type="checkbox"]').attr("checked", "true");
-  //   }
-  // });
-
   $(".set-full-height").css("height", "auto");
 });
 
-// $('[data-toggle=wizard-checkbox]').each(function(){
-//   this.onclick = function () {
-//     if ($(this).hasClass("active")) {
-//       $(this).removeClass("active");
-//       $(this).find('[type="checkbox"]').removeAttr("checked");
-//     } else {
-//       $(this).addClass("active");
-//       $(this).find('[type="checkbox"]').attr("checked", "true");
-//     }
+// var checkbox = $(".footer-checkbox");
+
+// if (!index == 0) {
+//   $(checkbox).css({
+//     opacity: "0",
+//     visibility: "hidden",
+//     position: "absolute",
+//   });
+// } else {
+//   $(checkbox).css({
+//     opacity: "1",
+//     visibility: "visible",
+//   });
+// }
+
+// $('[data-toggle="wizard-radio"]').on("click", function () {
+//   wizard = $(this).closest(".wizard-card");
+//   wizard.find('[data-toggle="wizard-radio"]').removeClass("active");
+//   $(this).addClass("active");
+//   $(wizard).find('[type="radio"]').removeAttr("checked");
+//   $(this).find('[type="radio"]').attr("checked", "true");
+// });
+
+// $('[data-toggle="wizard-checkbox"]').on('click', function () {
+//   if ($(this).hasClass("active")) {
+//     $(this).removeClass("active");
+//     $(this).find('[type="checkbox"]').removeAttr("checked");
+//   } else {
+//     $(this).addClass("active");
+//     $(this).find('[type="checkbox"]').attr("checked", "true");
 //   }
 // });
+
+$('[data-toggle=wizard-checkbox]').each(function(){
+  this.onclick = function () {
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
+      $(this).find('[type="checkbox"]').removeAttr("checked");
+    } else {
+      $(this).addClass("active");
+      $(this).find('[type="checkbox"]').attr("checked", "true");
+    }
+  }
+});
 
 document
   .querySelector("[data-toggle=wizard-checkbox]")
@@ -230,30 +217,19 @@ document
     };
   });
 
-//Function to show image before upload
-// function readURL(input) {
-//   if (input.files && input.files[0]) {
-//     var reader = new FileReader();
 
-//     reader.onload = function (e) {
-//       $("#wizardPicturePreview").attr("src", e.target.result).fadeIn("slow");
-//     };
-//     reader.readAsDataURL(input.files[0]);
-//   }
-// }
+$(window).resize(function () {
+  $(".wizard-card").each(function () {
+    $wizard = $(this);
 
-// $(window).resize(function () {
-//   $(".wizard-card").each(function () {
-//     $wizard = $(this);
+    index = $wizard.bootstrapWizard("currentIndex");
+    refreshAnimation($wizard, index);
 
-//     index = $wizard.bootstrapWizard("currentIndex");
-//     refreshAnimation($wizard, index);
-
-//     $(".moving-tab").css({
-//       transition: "transform 0s",
-//     });
-//   });
-// });
+    $(".moving-tab").css({
+      transition: "transform 0s",
+    });
+  });
+});
 
 function refreshAnimation($wizard, index) {
   $total = $wizard.find(".nav li").length;
@@ -370,25 +346,49 @@ const delivery = document.querySelector("#choice-delivery");
 //   console.log("click no gestao");
 // });
 
-function setActive(event) {
-  console.log('Evento: ' + event)
-  if (event.type === "touchstart") event.preventDefault();
-  const choice = document.querySelector('#choice-delivery')
-  choice.classList.toggle("active")
-  const active = choice.classList.contains("active")
-  console.log(active)
+// function setActive(event) {
+//   console.log("Evento: " + event);
+//   if (event.type === "touchstart") event.preventDefault();
+//   const choice = document.querySelector("#choice-delivery");
+//   choice.classList.toggle("active");
+//   const active = choice.classList.contains("active");
+//   console.log(active);
+// }
+
+// delivery.addEventListener(
+//   "click",
+//   setActive
+// );
+
+
+function watchForHover() {
+  // lastTouchTime is used for ignoring emulated mousemove events
+  // that are fired after touchstart events. Since they're
+  // indistinguishable from real events, we use the fact that they're
+  // fired a few milliseconds after touchstart to filter them.
+  let lastTouchTime = 0
+
+  function enableHover() {
+    if (new Date() - lastTouchTime < 500) return
+    document.body.classList.add('hasHover')
+  }
+
+  function disableHover() {
+    document.body.classList.remove('hasHover')
+  }
+
+  function updateLastTouchTime() {
+    lastTouchTime = new Date()
+  }
+
+  document.addEventListener('touchstart', updateLastTouchTime, true)
+  document.addEventListener('touchstart', disableHover, true)
+  document.addEventListener('mousemove', enableHover, true)
+
+  enableHover()
 }
 
-delivery.addEventListener("click", setActive
-// () => {
-//   if (event.type === "touchstart") event.preventDefault();
-//   console.log("click no delivery");
-//   delivery.classList.toggle("active")
-// }
-);
-// document.querySelector("#choice-fiscal").addEventListener("click", () => {
-//   console.log("click no fiscal");
-// });
+watchForHover()
 
 let produtosObj = [
   {
