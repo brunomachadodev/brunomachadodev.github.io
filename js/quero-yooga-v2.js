@@ -2,12 +2,16 @@ var searchVisible = 0;
 var transparent = true;
 var mobile_device = false;
 
-let clientUserAgent = navigator.userAgent;
+var firstStep = false;
+var secondStep = false;
+var thirdStep = false;
 
-var utm;
+const clientUserAgent = navigator.userAgent;
 
-// const urlSite = "http://localhost:3333/";
-const urlSite = "https://marketing.yooga.com.br/";
+var utm = null;
+
+const urlSite = "http://localhost:3333/";
+// const urlSite = "https://marketing.yooga.com.br/";
 
 function create_UUID() {
   var dt = new Date().getTime();
@@ -66,29 +70,34 @@ $(document).ready(function () {
   var $validator = $(".wizard-card form").validate({
     rules: {
       name: {
-        required: false,
+        required: true,
         minlength: 3,
       },
       lastname: {
-        required: false,
+        required: true,
         minlength: 3,
       },
       email: {
-        required: false,
+        required: true,
         minlength: 3,
+        email: true,
       },
       company: {
-        required: false,
+        required: true,
         minlength: 3,
       },
-      modeloNegocio: {
-        required: false,
+      businessModel: {
+        required: true,
       },
-      faturamentoMensal: {
-        required: false,
+      monthlyRevenue: {
+        required: true,
       },
-      tempoAtividade: {
-        required: false,
+      uptime: {
+        required: true,
+      },
+      systemChoices: {
+        required: true,
+        minlength: 1,
       },
     },
 
@@ -123,15 +132,15 @@ $(document).ready(function () {
       $(".moving-tab").css("transition", "transform 0s");
     },
 
-    onTabClick: function (tab, navigation, index) {
-      var $valid = $(".wizard-card form").valid();
+    // onTabClick: function (tab, navigation, index) {
+    //   var $valid = $(".wizard-card form").valid();
 
-      if (!$valid) {
-        return false;
-      } else {
-        return true;
-      }
-    },
+    //   if (!$valid) {
+    //     return false;
+    //   } else {
+    //     return true;
+    //   }
+    // },
 
     onTabShow: function (tab, navigation, index) {
       var $total = navigation.find("li").length;
@@ -158,21 +167,6 @@ $(document).ready(function () {
   $(".set-full-height").css("height", "auto");
 });
 
-// var checkbox = $(".footer-checkbox");
-
-// if (!index == 0) {
-//   $(checkbox).css({
-//     opacity: "0",
-//     visibility: "hidden",
-//     position: "absolute",
-//   });
-// } else {
-//   $(checkbox).css({
-//     opacity: "1",
-//     visibility: "visible",
-//   });
-// }
-
 // $('[data-toggle="wizard-radio"]').on("click", function () {
 //   wizard = $(this).closest(".wizard-card");
 //   wizard.find('[data-toggle="wizard-radio"]').removeClass("active");
@@ -181,17 +175,128 @@ $(document).ready(function () {
 //   $(this).find('[type="radio"]').attr("checked", "true");
 // });
 
-// $('[data-toggle="wizard-checkbox"]').on('click', function () {
-//   if ($(this).hasClass("active")) {
-//     $(this).removeClass("active");
-//     $(this).find('[type="checkbox"]').removeAttr("checked");
-//   } else {
-//     $(this).addClass("active");
-//     $(this).find('[type="checkbox"]').attr("checked", "true");
-//   }
+$("[name=next]").click(function () {
+  // If de validação ---
+  // if (!isFirstStepValid()) {
+  //   return;
+  // }
+
+  //===========================================================
+  // Primeiro Step
+  //===========================================================
+  if (!firstStep) {
+    let name = $("#name").val();
+    let email = $("#email").val();
+    let phone = $("#phone").val();
+
+    if (name && email && phone) {
+      firstStep = true;
+    }
+
+    // Label - lead
+    // dataLayer.push({ step: "b2", event: "tracking" });
+
+    // $.ajax({
+    //   type: "POST",
+    //   url: `${urlSite}lead/pipefyFirstStep`,
+    //   data: {
+    //     name: $("#name").val(),
+    //     email: $("#email").val(),
+    //     phone: $("#phone").val(),
+    //     cupom: $("#cupom").val() ? $("#cupom").val() : "",
+    //     utm: utm,
+    //   },
+    //   success: (res) => {
+    //     pipefyData = res;
+    //     if (pipefyData[0]) {
+    //       cardPipeComercial = pipefyData[0].vendas00.card.id;
+    //       cardPipeSelfService = pipefyData[0].self00.card.id;
+    //     } else {
+    //       cardPipeComercial = "";
+    //       cardPipeSelfService = "";
+    //     }
+    //   },
+    // });
+
+    let data = {
+      name: $("#name").val(),
+      email: $("#email").val(),
+      phone: $("#phone").val(),
+      // cupom: $("#cupom").val() ? $("#cupom").val() : null,
+      utm: utm ? utm : null,
+    };
+
+    console.log(data);
+  }
+  //===========================================================
+  // Segundo Step
+  //===========================================================
+  else if (!secondStep && firstStep) {
+    let values = Array.from(
+      document.querySelectorAll('input[name="systemChoices"]')
+    )
+      .filter((checkbox) => checkbox.checked)
+      .map((checkbox) => checkbox.value);
+
+    if (values.length > 0) {
+      secondStep = true;
+    } else {
+      let errorMessage = document.querySelector(".system-choices-error");
+      errorMessage.style.display = "block";
+      var center = $(window).outerHeight() / 2;
+      var top = $(this).offset().top;
+      if (top > center) {
+        $("html, body").animate({ scrollTop: top - center }, "fast");
+      }
+    }
+
+    // Label - qualified-lead
+    // dataLayer.push({ step: "b3", event: "tracking" });
+
+    // if (pipefyData) {
+    //   $.ajax({
+    //     type: "POST",
+    //     url: `${urlSite}lead/pipefySecondStep`,
+    //     data: {
+    //       company: company,
+    //       negocio: negocio,
+    //       como_vendas: como_vendas,
+    //       comercial: {
+    //         cardId: cardPipeComercial,
+    //       },
+    //       selfService: {
+    //         cardId: cardPipeSelfService,
+    //       },
+    //       db_id: pipefyData[1].id,
+    //     },
+    //     success: (res) => {
+    //       //
+    //     },
+    //   });
+    // }
+
+    let data = {
+      company: $("#company").val(),
+      negocio: $("#businessModel").val(),
+      faturamento_mensal: $("#monthlyRevenue").val(),
+      tempo_negocio: $("#uptime").val(),
+      systemChoices: values,
+    };
+
+    console.log(data);
+  }
+});
+
+// $("[name=next]").click(function () {
+//   // let company = $("#company").val();
+//   // let negocio = $("#negocio").val();
+//   // let como_vendas = $("input[name=como-vendas]:checked").val();
+//   // if (!isSecondStepValid(company, negocio, como_vendas)) {
+//   //   return;
+//   // }
 // });
 
-$('[data-toggle=wizard-checkbox]').each(function(){
+$("[data-toggle=wizard-checkbox]").each(function () {
   this.onclick = function () {
     if ($(this).hasClass("active")) {
       $(this).removeClass("active");
@@ -200,23 +305,8 @@ $('[data-toggle=wizard-checkbox]').each(function(){
       $(this).addClass("active");
       $(this).find('[type="checkbox"]').attr("checked", "true");
     }
-  }
+  };
 });
-
-document
-  .querySelector("[data-toggle=wizard-checkbox]")
-  .addEventListener("click", function () {
-    this.onclick = function () {
-      if ($(this).hasClass("active")) {
-        $(this).removeClass("active");
-        $(this).find('[type="checkbox"]').removeAttr("checked");
-      } else {
-        $(this).addClass("active");
-        $(this).find('[type="checkbox"]').attr("checked", "true");
-      }
-    };
-  });
-
 
 $(window).resize(function () {
   $(".wizard-card").each(function () {
@@ -331,64 +421,30 @@ document.getElementById("trial-button").addEventListener("click", () => {
   document.getElementById("finishing-choices").style.display = "none";
 });
 
-const sistemaGestao = document.querySelector("#choice-sistema-gestao");
-const delivery = document.querySelector("#choice-delivery");
-
-// sistemaGestao.addEventListener("click", function () {
-//   sistemaGestao.classList.toggle("active");
-//   if (this.classList.contains("active")) {
-//     this.classList.remove("active");
-//           $(this).find('[type="checkbox"]').removeAttr("checked");
-//   } else {
-//     this.classList.add("active");
-//           $(this).find('[type="checkbox"]').attr("checked", "true");
-//   }
-//   console.log("click no gestao");
-// });
-
-// function setActive(event) {
-//   console.log("Evento: " + event);
-//   if (event.type === "touchstart") event.preventDefault();
-//   const choice = document.querySelector("#choice-delivery");
-//   choice.classList.toggle("active");
-//   const active = choice.classList.contains("active");
-//   console.log(active);
-// }
-
-// delivery.addEventListener(
-//   "click",
-//   setActive
-// );
-
-
 function watchForHover() {
-  // lastTouchTime is used for ignoring emulated mousemove events
-  // that are fired after touchstart events. Since they're
-  // indistinguishable from real events, we use the fact that they're
-  // fired a few milliseconds after touchstart to filter them.
-  let lastTouchTime = 0
+  let lastTouchTime = 0;
 
   function enableHover() {
-    if (new Date() - lastTouchTime < 500) return
-    document.body.classList.add('hasHover')
+    if (new Date() - lastTouchTime < 500) return;
+    document.body.classList.add("hasHover");
   }
 
   function disableHover() {
-    document.body.classList.remove('hasHover')
+    document.body.classList.remove("hasHover");
   }
 
   function updateLastTouchTime() {
-    lastTouchTime = new Date()
+    lastTouchTime = new Date();
   }
 
-  document.addEventListener('touchstart', updateLastTouchTime, true)
-  document.addEventListener('touchstart', disableHover, true)
-  document.addEventListener('mousemove', enableHover, true)
+  document.addEventListener("touchstart", updateLastTouchTime, true);
+  document.addEventListener("touchstart", disableHover, true);
+  document.addEventListener("mousemove", enableHover, true);
 
-  enableHover()
+  enableHover();
 }
 
-watchForHover()
+watchForHover();
 
 let produtosObj = [
   {

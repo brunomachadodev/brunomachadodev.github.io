@@ -1406,14 +1406,6 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
   line-height: 22px;
 }
 
-/* #playlist {
-  height: 0;
-  width: 560px;
-  
-} */
-
-
-
 .inside-sale-container {
   display: flex;
   flex-direction: column;
@@ -1550,6 +1542,15 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
   color: #F45B93; }
 .choice.active svg {
     fill: #F45B93;
+}
+
+.system-choices-error {
+  display: none;
+}
+.system-choices-error h6 {
+  text-transform: none;
+  color: red;
+  text-align: center;
 }
 
 body.hasHover .choice:hover .icon {

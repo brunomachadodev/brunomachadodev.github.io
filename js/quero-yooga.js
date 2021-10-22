@@ -4051,7 +4051,6 @@ $(".next_2").click(function () {
     // Label - qualified-lead
     dataLayer.push({ step: "b3", event: "tracking" });
 
-    let cardPipe;
     if (pipefyData) {
       $.ajax({
         type: "POST",

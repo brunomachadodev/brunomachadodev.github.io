@@ -292,7 +292,7 @@
                             <div class="form-group label-floating">
                               <label class="control-label" for="name"
                                 >Nome completo
-                                <small>(obrigatório)</small></label
+                                <small>(*)</small></label
                               >
                               <input
                                 name="name"
@@ -309,7 +309,7 @@
                             </span>
                             <div class="form-group label-floating">
                               <label class="control-label" for="email"
-                                >Email <small>(obrigatório)</small></label
+                                >Digite seu melhor e-mail <small>*</small></label
                               >
                               <input
                                 name="email"
@@ -368,7 +368,7 @@
                               >Tipo de estabelecimento
                               <small>(obrigatório)</small></label
                             >
-                            <select name="modeloNegocio" class="form-control">
+                            <select id="businessModel" name="businessModel" class="form-control">
                               <option disabled="" selected=""></option>
                               <option value="Restaurante">Restaurante</option>
                               <option value="Hamburgueria">Lanchonete</option>
@@ -396,12 +396,13 @@
 
                         <div class="col-sm-5 offset-sm-1">
                           <div class="form-group label-floating">
-                            <label class="control-label"
+                            <label class="control-label" for="monthlyRevenue"
                               >Faturamento mensal
                               <small>(obrigatório)</small></label
                             >
                             <select
-                              name="faturamentoMensal"
+                              id="monthlyRevenue"
+                              name="monthlyRevenue"
                               class="form-control"
                             >
                               <option disabled="" selected=""></option>
@@ -424,11 +425,11 @@
 
                         <div class="col-sm-5">
                           <div class="form-group label-floating">
-                            <label class="control-label"
+                            <label class="control-label" for="uptime"
                               >Tempo de atividade
                               <small>(obrigatório)</small></label
                             >
-                            <select name="tempoAtividade" class="form-control">
+                            <select id="uptime" name="uptime" class="form-control">
                               <option disabled="" selected=""></option>
                               <option value="1 a 6 meses">1 a 6 meses</option>
                               <option value="7 a 12 meses">7 a 12 meses</option>
@@ -456,8 +457,9 @@
                               >
                                 <input
                                   type="checkbox"
-                                  name="jobb"
+                                  name="systemChoices"
                                   value="Sistema de Gestão"
+                                  style="left: -300000px;"
                                 />
                                 <div class="icon">
                                   <i>
@@ -493,8 +495,9 @@
                               >
                                 <input
                                   type="checkbox"
-                                  name="jobb"
+                                  name="systemChoices"
                                   value="Delivery"
+                                  style="left: -500000px;"
                                 />
                                 <div class="icon">
                                   <i>
@@ -528,8 +531,9 @@
                               >
                                 <input
                                   type="checkbox"
-                                  name="jobb"
+                                  name="systemChoices"
                                   value="Fiscal"
+                                  style="left: -700000px;"
                                 />
                                 <div class="icon">
                                   <i>
@@ -560,6 +564,9 @@
                                 title="Emissão imediata de notas fiscais de venda, entrada e saída, arquivos XML, área do contador e robô de notas."
                                 >?</span
                               >
+                            </div>
+                            <div class="col-sm-10 offset-sm-1 system-choices-error">
+                              <h6>Ei, não deixe de selecionar as opções do nosso sistema</h6>
                             </div>
                           </div>
                         </div>
@@ -769,12 +776,12 @@
                     </div>
 
                     <div class="pull-left">
-                      <input
+                      <!-- <input
                         type="button"
                         class="btn btn-previous btn-fill btn-default btn-wd"
                         name="previous"
                         value="Previous"
-                      />
+                      /> -->
                     </div>
                     <div class="clearfix"></div>
                   </div>
@@ -971,7 +978,7 @@
     <script src="vendors/wizard-form/jquery.validate.min.js"></script>
 
     <!-- Yooga Scripts -->
-    <script src="./js/quero-yooga-v2.js"></script>
+    <script src="./js/quero-yooga-v2.js?v=1.1"></script>
     <script src="./js/general.js?v=1.2"></script>
 
     <!-- <script>
