@@ -4380,7 +4380,7 @@ function isFirstStepValid() {
     document.getElementById("WrongPhone").style.display = "block";
     return false;
   }
-  if (email.indexOf(".com") > 0 === false) {
+  if (email.indexOf(".") > 0 === false) {
     document.getElementById("WrongPhone").style.display = "block";
     return false;
   }

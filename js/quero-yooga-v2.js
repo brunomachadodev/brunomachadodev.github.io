@@ -2,6 +2,8 @@ var searchVisible = 0;
 var transparent = true;
 var mobile_device = false;
 
+var currentStep = 0;
+
 var firstStep = false;
 var secondStep = false;
 var thirdStep = false;
@@ -69,58 +71,66 @@ $(document).ready(function () {
   $.material.init();
   $('[data-toggle="tooltip"]').tooltip();
 
-  var $validator = $(".wizard-card form").validate({
-    rules: {
-      name: {
-        required: false,
-        minlength: 3,
-      },
-      lastname: {
-        required: false,
-        minlength: 3,
-      },
-      email: {
-        required: false,
-        minlength: 3,
-        email: false,
-      },
-      company: {
-        required: false,
-        minlength: 3,
-      },
-      businessModel: {
-        required: false,
-      },
-      monthlyRevenue: {
-        required: false,
-      },
-      uptime: {
-        required: false,
-      },
-      systemChoices: {
-        required: false,
-        minlength: 1,
-      },
-    },
-
-    errorPlacement: function (error, element) {
-      $(element).parent("div").addClass("has-error");
-    },
-  });
+  $.validator.methods.email = function (value, element) {
+    return this.optional(element) || /[a-z]+@[a-z]+\.[a-z]+/.test(value);
+  };
 
   $(".wizard-card").bootstrapWizard({
     tabClass: "nav nav-pills",
     nextSelector: ".btn-next",
-    previousSelector: ".btn-previous",
+    // previousSelector: ".btn-previous",
 
-    onNext: function (tab, navigation, index) {
-      var $valid = $(".wizard-card form").valid();
-      if (!$valid) {
-        $validator.focusInvalid();
-        return false;
+    onNext: function () {
+      // console.log("CurrentStep início: " + currentStep);
+      if (currentStep == 0) {
+        let name = $("#name").val();
+        let email = $("#email").val();
+        let phone = $("#phone").val();
+        if (!isFirstStepValid(name, email, phone)) {
+          return false;
+        }
+        sendFirstStep(name, email, phone);
+        currentStep++;
+      } else if (currentStep == 1) {
+        let company = $("#company").val();
+        businessModel = $("#businessModel").val();
+        let monthlyRevenue = $("#monthlyRevenue").val();
+        let uptime = $("#uptime").val();
+        let values = Array.from(
+          document.querySelectorAll('input[name="systemChoices"]')
+        )
+          .filter((checkbox) => checkbox.checked)
+          .map((checkbox) => checkbox.value);
+
+        if (
+          !isSecondStepValid(
+            company,
+            businessModel,
+            monthlyRevenue,
+            uptime,
+            values
+          )
+        ) {
+          return false;
+        }
+        sendSecondStep(company, businessModel, monthlyRevenue, uptime, values);
+        currentStep++;
       }
+      console.log("CurrentStep fim: " + currentStep);
+      return true;
     },
-
+    // function (tab, navigation, index) {
+    //   console.log("Current Step: " + currentStep);
+    //   var $valid = $(".wizard-card form").valid();
+    //   letsgo();
+    //   if (!isFirstStepValid()) {
+    //     return false;
+    //   }
+    //   if (!$valid) {
+    //     $validator.focusInvalid();
+    //     return false;
+    //   }
+    // }
     onInit: function (tab, navigation, index) {
       var $total = navigation.find("li").length;
       var $wizard = navigation.closest(".wizard-card");
@@ -152,7 +162,6 @@ $(document).ready(function () {
 
       if ($current >= $total) {
         $($wizard).find(".btn-next").hide();
-        // $($wizard).find(".btn-finish").show();
       } else {
         $($wizard).find(".btn-next").show();
         $($wizard).find(".btn-finish").hide();
@@ -169,134 +178,211 @@ $(document).ready(function () {
   $(".set-full-height").css("height", "auto");
 });
 
-// $('[data-toggle="wizard-radio"]').on("click", function () {
-//   wizard = $(this).closest(".wizard-card");
-//   wizard.find('[data-toggle="wizard-radio"]').removeClass("active");
-//   $(this).addClass("active");
-//   $(wizard).find('[type="radio"]').removeAttr("checked");
-//   $(this).find('[type="radio"]').attr("checked", "true");
-// });
-
-$("[name=next]").click(function () {
-  // If de validação ---
-  // if (!isFirstStepValid()) {
-  //   return;
-  // }
-
+// $("[name=next]").click(function () {
+function letsgo() {
   //===========================================================
   // Primeiro Step
   //===========================================================
-  if (!firstStep) {
+  if (currentStep == 0) {
     let name = $("#name").val();
     let email = $("#email").val();
     let phone = $("#phone").val();
 
-    if (name && email && phone) {
-      firstStep = true;
+    if (!isFirstStepValid()) {
+      return false;
     }
 
-    // Label - lead
-    // dataLayer.push({ step: "b2", event: "tracking" });
+    // if (name && email && phone) {
+    //   firstStep = true;
+    // }
 
-    // $.ajax({
-    //   type: "POST",
-    //   url: `${urlSite}lead/pipefyFirstStep`,
-    //   data: {
-    //     name: $("#name").val(),
-    //     email: $("#email").val(),
-    //     phone: $("#phone").val(),
-    //     cupom: $("#cupom").val() ? $("#cupom").val() : "",
-    //     utm: utm,
-    //   },
-    //   success: (res) => {
-    //     pipefyData = res;
-    //     if (pipefyData[0]) {
-    //       cardPipeComercial = pipefyData[0].vendas00.card.id;
-    //       cardPipeSelfService = pipefyData[0].self00.card.id;
-    //     } else {
-    //       cardPipeComercial = "";
-    //       cardPipeSelfService = "";
-    //     }
-    //   },
-    // });
-
-    let data = {
-      name: $("#name").val(),
-      email: $("#email").val(),
-      phone: $("#phone").val(),
-      // cupom: $("#cupom").val() ? $("#cupom").val() : null,
+    let firstData = {
+      name: name,
+      email: email,
+      phone: phone,
       utm: utm ? utm : null,
     };
 
-    console.log(data);
+    console.log(firstData);
+    firstStep = true;
   }
   //===========================================================
   // Segundo Step
   //===========================================================
-  else if (!secondStep && firstStep) {
-    let values = Array.from(
-      document.querySelectorAll('input[name="systemChoices"]')
-    )
-      .filter((checkbox) => checkbox.checked)
-      .map((checkbox) => checkbox.value);
+  // if (!secondStep && firstStep) {
+  //   let values = Array.from(
+  //     document.querySelectorAll('input[name="systemChoices"]')
+  //   )
+  //     .filter((checkbox) => checkbox.checked)
+  //     .map((checkbox) => checkbox.value);
 
-    if (values.length > 0) {
-      secondStep = true;
-    } else {
-      let errorMessage = document.querySelector(".system-choices-error");
-      errorMessage.style.display = "block";
-      var center = $(window).outerHeight() / 2;
-      var top = $(this).offset().top;
-      if (top > center) {
-        $("html, body").animate({ scrollTop: top - center }, "fast");
-      }
-    }
+  //   if (values.length > 0) {
+  //     secondStep = true;
+  //     console.log("maior que 0");
+  //   } else {
+  //     console.log("menor que 0");
+  //     let errorMessage = document.querySelector(".system-choices-error");
+  //     errorMessage.style.display = "block";
+  //     var center = $(window).outerHeight() / 2;
+  //     var top = $(this).offset().top;
+  //     if (top > center) {
+  //       $("html, body").animate({ scrollTop: top - center }, "fast");
+  //     }
+  //   }
 
-    // Label - qualified-lead
-    // dataLayer.push({ step: "b3", event: "tracking" });
+  //   let data = {
+  //     company: $("#company").val(),
+  //     negocio: $("#businessModel").val(),
+  //     faturamento_mensal: $("#monthlyRevenue").val(),
+  //     tempo_negocio: $("#uptime").val(),
+  //     systemChoices: values,
+  //   };
 
-    // if (pipefyData) {
-    //   $.ajax({
-    //     type: "POST",
-    //     url: `${urlSite}lead/pipefySecondStep`,
-    //     data: {
-    //       company: company,
-    //       negocio: negocio,
-    //       como_vendas: como_vendas,
-    //       comercial: {
-    //         cardId: cardPipeComercial,
-    //       },
-    //       selfService: {
-    //         cardId: cardPipeSelfService,
-    //       },
-    //       db_id: pipefyData[1].id,
-    //     },
-    //     success: (res) => {
-    //       //
-    //     },
-    //   });
-    // }
+  //   console.log(data);
+  // }
+}
+//===========================================================
+// Senders
+//===========================================================
 
-    let data = {
-      company: $("#company").val(),
-      negocio: $("#businessModel").val(),
-      faturamento_mensal: $("#monthlyRevenue").val(),
-      tempo_negocio: $("#uptime").val(),
-      systemChoices: values,
-    };
+function sendFirstStep(name, email, phone) {
+  let firstData = {
+    name: name,
+    email: email,
+    phone: phone,
+    utm: utm ? utm : null,
+  };
+  console.log(firstData);
+}
 
-    console.log(data);
+function sendSecondStep(
+  company,
+  businessModel,
+  monthlyRevenue,
+  uptime,
+  values
+) {
+  let secondData = {
+    company: company,
+    businessModel: businessModel,
+    monthlyRevenue: monthlyRevenue,
+    uptime: uptime,
+    system: values,
+  };
+  console.log(secondData);
+}
+
+//===========================================================
+// Validation
+//===========================================================
+
+function validateEmail(email) {
+  const re =
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+function showError(step, content, element) {
+  if (step == "first") {
+    document.querySelector(".first-step-error-text").innerHTML = content;
+    document.querySelector(".first-step-error").style.display = "block";
   }
-});
+  if (element) {
+    setErrorStyle(element);
+  }
+}
 
-// $("[name=next]").click(function () {
-//   // let company = $("#company").val();
-//   // let negocio = $("#negocio").val();
-//   // let como_vendas = $("input[name=como-vendas]:checked").val();
-//   // if (!isSecondStepValid(company, negocio, como_vendas)) {
-//   //   return;
-//   // }
-// });
+function setErrorStyle(element) {
+  $(`#${element}`).parent("div").addClass("has-error");
+  $(`#${element}`).focus();
+}
+
+function isFirstStepValid(name, email, phone) {
+  if (!name | !email | !phone) {
+    if (!phone) setErrorStyle("phone");
+    if (!email) setErrorStyle("email");
+    if (!name) setErrorStyle("name");
+    showError("first", "Por favor, preencha todos os campos.");
+    return false;
+  }
+
+  if (
+    (name === "xxx") |
+    (name === "xxxx") |
+    (name === "teste") |
+    (name === "TESTE") |
+    (name === "TESTE EMPRESA") |
+    (name === "Teste") |
+    (name === "Sem empresa") |
+    (name === "Sem Empresa") |
+    (name === "sem empresa")
+  ) {
+    showError("first", "Por favor, informe um nome válido.", "name");
+    return false;
+  }
+
+  var phoneClear = phone.replace(/[^0-9]/g, "");
+
+  if (
+    (phoneClear.length < 11) |
+    (phoneClear === "12312312312") |
+    (phoneClear === "99999999999") |
+    (phoneClear === "88888888888") |
+    (phoneClear === "77777777777") |
+    (phoneClear === "66666666666") |
+    (phoneClear === "55555555555") |
+    (phoneClear === "44444444444") |
+    (phoneClear === "33333333333") |
+    (phoneClear === "22222222222") |
+    (phoneClear === "11111111111") |
+    (phoneClear === "00000000000")
+  ) {
+    showError(
+      "first",
+      "Por favor, informe um número de celular válido.",
+      "phone"
+    );
+    return false;
+  }
+
+  if (
+    !validateEmail(email) ||
+    email.indexOf("@") > 0 === false ||
+    email.indexOf(".") > 0 === false
+  ) {
+    showError("first", "Por favor, informe um email válido.", "email");
+    return false;
+  }
+
+  return true;
+}
+
+function isSecondStepValid(
+  company,
+  businessModel,
+  monthlyRevenue,
+  uptime,
+  values
+) {
+  if (
+    (!company?.trim() || !businessModel || !monthlyRevenue || !uptime) &&
+    values.length == 0
+  ) {
+    if (!uptime) setErrorStyle("uptime");
+    if (!monthlyRevenue) setErrorStyle("monthlyRevenue");
+    if (!businessModel) setErrorStyle("businessModel");
+    if (!company?.trim()) setErrorStyle("company");
+    return false;
+  }
+
+  if (values.length == 0) {
+    let errorMessage = document.querySelector(".system-choices-error");
+    errorMessage.style.display = "block";
+    return false;
+  }
+
+  return true;
+}
 
 $("[data-toggle=wizard-checkbox]").each(function () {
   this.onclick = function () {
@@ -447,6 +533,59 @@ function watchForHover() {
 }
 
 watchForHover();
+
+// $('[data-toggle="wizard-radio"]').on("click", function () {
+//   wizard = $(this).closest(".wizard-card");
+//   wizard.find('[data-toggle="wizard-radio"]').removeClass("active");
+//   $(this).addClass("active");
+//   $(wizard).find('[type="radio"]').removeAttr("checked");
+//   $(this).find('[type="radio"]').attr("checked", "true");
+// });
+
+// var $validator = $(".wizard-card form").validate({
+//   rules: {
+//     name: {
+//       required: true,
+//       minlength: 3,
+//     },
+//     phone: {
+//       required: true,
+//       minlength: 3,
+//     },
+//     email: {
+//       required: true,
+//       minlength: 3,
+//       email: true,
+//     },
+//     company: {
+//       required: true,
+//       minlength: 3,
+//     },
+//     businessModel: {
+//       required: true,
+//     },
+//     monthlyRevenue: {
+//       required: true,
+//     },
+//     uptime: {
+//       required: true,
+//     },
+//     systemChoices: {
+//       required: true,
+//       minlength: 1,
+//     },
+//   },
+
+//   errorPlacement: function (error, element) {
+//     $(element).parent("div").addClass("has-error");
+
+//     if (element.attr("name") == "systemChoices") {
+//       console.log("o erro [deu certo]");
+//       let errorMessage = document.querySelector(".system-choices-error");
+//       errorMessage.style.display = "block";
+//     }
+//   },
+// });
 
 let produtosObj = [
   {

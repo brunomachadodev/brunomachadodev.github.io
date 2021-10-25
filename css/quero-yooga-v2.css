@@ -1544,10 +1544,12 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
     fill: #F45B93;
 }
 
-.system-choices-error {
+.system-choices-error,
+.first-step-error {
   display: none;
 }
-.system-choices-error h6 {
+.system-choices-error h6,
+.first-step-error h6 {
   text-transform: none;
   color: red;
   text-align: center;

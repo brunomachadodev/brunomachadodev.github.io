@@ -211,7 +211,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a id="param5" class="param" href="../planos-precos">
+              <a id="param5" class="param" href="./planos-precos">
                 Planos e Preços
               </a>
             </li>
@@ -237,7 +237,7 @@
               <a
                 id="param7"
                 class="param button btn-experimente"
-                href="../quero-yooga"
+                href="./quero-yooga"
                 onclick="dataLayer.push({'step': 'k1', 'event': 'tracking'});"
                 >Experimente Grátis</a
               >
@@ -291,8 +291,7 @@
                             </span>
                             <div class="form-group label-floating">
                               <label class="control-label" for="name"
-                                >Nome completo
-                                <small>(*)</small></label
+                                >Nome completo <small>*</small></label
                               >
                               <input
                                 name="name"
@@ -309,7 +308,8 @@
                             </span>
                             <div class="form-group label-floating">
                               <label class="control-label" for="email"
-                                >Digite seu melhor e-mail <small>*</small></label
+                                >Digite seu melhor e-mail
+                                <small>*</small></label
                               >
                               <input
                                 name="email"
@@ -326,15 +326,23 @@
                             </span>
                             <div class="form-group label-floating">
                               <label class="control-label" for="phone"
-                                >Celular <small>(obrigatório)</small></label
+                                >Celular (com DDD) <small>*</small></label
                               >
                               <input
-                                name="lastname"
+                                name="phone"
                                 id="phone"
                                 type="text"
                                 class="form-control"
                               />
                             </div>
+                          </div>
+                          <div
+                            class="col-sm-10 offset-sm-1 first-step-error"
+                          >
+                            <h6 class="first-step-error-text">
+                              Ei, não deixe de selecionar as opções do nosso
+                              sistema
+                            </h6>
                           </div>
                         </div>
                       </div>
@@ -352,7 +360,7 @@
                           <div class="form-group label-floating">
                             <label class="control-label" for="company"
                               >Nome da empresa
-                              <small>(obrigatório)</small></label
+                              <small>*</small></label
                             >
                             <input
                               name="company"
@@ -366,9 +374,13 @@
                           <div class="form-group label-floating">
                             <label class="control-label"
                               >Tipo de estabelecimento
-                              <small>(obrigatório)</small></label
+                              <small>*</small></label
                             >
-                            <select id="businessModel" name="businessModel" class="form-control">
+                            <select
+                              id="businessModel"
+                              name="businessModel"
+                              class="form-control"
+                            >
                               <option disabled="" selected=""></option>
                               <option value="Restaurante">Restaurante</option>
                               <option value="Hamburgueria">Lanchonete</option>
@@ -398,7 +410,7 @@
                           <div class="form-group label-floating">
                             <label class="control-label" for="monthlyRevenue"
                               >Faturamento mensal
-                              <small>(obrigatório)</small></label
+                              <small>*</small></label
                             >
                             <select
                               id="monthlyRevenue"
@@ -427,9 +439,13 @@
                           <div class="form-group label-floating">
                             <label class="control-label" for="uptime"
                               >Tempo de atividade
-                              <small>(obrigatório)</small></label
+                              <small>*</small></label
                             >
-                            <select id="uptime" name="uptime" class="form-control">
+                            <select
+                              id="uptime"
+                              name="uptime"
+                              class="form-control"
+                            >
                               <option disabled="" selected=""></option>
                               <option value="1 a 6 meses">1 a 6 meses</option>
                               <option value="7 a 12 meses">7 a 12 meses</option>
@@ -459,7 +475,7 @@
                                   type="checkbox"
                                   name="systemChoices"
                                   value="Sistema de Gestão"
-                                  style="left: -300000px;"
+                                  style="left: -300000px"
                                 />
                                 <div class="icon">
                                   <i>
@@ -497,7 +513,7 @@
                                   type="checkbox"
                                   name="systemChoices"
                                   value="Delivery"
-                                  style="left: -500000px;"
+                                  style="left: -500000px"
                                 />
                                 <div class="icon">
                                   <i>
@@ -533,7 +549,7 @@
                                   type="checkbox"
                                   name="systemChoices"
                                   value="Fiscal"
-                                  style="left: -700000px;"
+                                  style="left: -700000px"
                                 />
                                 <div class="icon">
                                   <i>
@@ -565,8 +581,13 @@
                                 >?</span
                               >
                             </div>
-                            <div class="col-sm-10 offset-sm-1 system-choices-error">
-                              <h6>Ei, não deixe de selecionar as opções do nosso sistema</h6>
+                            <div
+                              class="col-sm-10 offset-sm-1 system-choices-error"
+                            >
+                              <h6>
+                                Ei, não deixe de selecionar as opções do nosso
+                                sistema
+                              </h6>
                             </div>
                           </div>
                         </div>
@@ -760,12 +781,12 @@
                         data-action="reset-scroll"
                         value="Próximo"
                       />
-                      <input
+                      <!-- <input
                         type="button"
                         class="btn btn-finish btn-fill btn-success btn-wd"
                         name="finish"
                         value="Finish"
-                      />
+                      /> -->
                       <input
                         type="button"
                         id="acessar-sistema"
@@ -808,7 +829,7 @@
       <div class="container">
         <div class="row">
           <div class="offset-sm-1 col-sm-5 logo-container">
-            <a id="param13" class="param logo" href="../"
+            <a id="param8" class="param logo" href="../"
               ><img src="../images/home/logo-primaria.svg" alt="Logotipo Yooga"
             /></a>
 
@@ -868,17 +889,17 @@
 
                 <ul class="collapse" id="footerSolucoes">
                   <li>
-                    <a id="param14" href="./gestao" class="param links">
+                    <a id="param9" href="./gestao" class="param links">
                       Gestão
                     </a>
                   </li>
                   <li>
-                    <a id="param15" href="./delivery" class="param links">
+                    <a id="param10" href="./delivery" class="param links">
                       Delivery
                     </a>
                   </li>
                   <li>
-                    <a id="param16" href="./fiscal" class="param links">
+                    <a id="param11" href="./fiscal" class="param links">
                       Fiscal
                     </a>
                   </li>
@@ -886,7 +907,7 @@
               </div>
 
               <div class="col-12 pb-3">
-                <a id="param17" href="../planos-precos" class="param links"
+                <a id="param12" href="../planos-precos" class="param links"
                   >Planos e Preços</a
                 >
               </div>
