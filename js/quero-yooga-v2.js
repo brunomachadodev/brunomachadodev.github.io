@@ -32,6 +32,25 @@ function create_UUID() {
 
 window.onload = localStorage.setItem("eventId", create_UUID());
 
+// document.addEventListener("keyup", function (event) {
+//   if (event.defaultPrevented) {
+//     return;
+//   }
+
+//   var key = event.key || event.keyCode;
+
+//   if (key == 13) {
+//     alert('enter presisonado');
+//   }
+// });
+
+$(document).keypress(function (e) {
+  if (e.which == 13) {
+    document.querySelector(".btn-next").click();
+    // alert('enter presisonado')
+  }
+});
+
 $(document).ready(function () {
   let url = window.location.href;
   let param = url.split("?");
@@ -298,10 +317,10 @@ function setErrorStyle(element) {
 }
 
 function isFirstStepValid(name, email, phone) {
-  if (!name | !email | !phone) {
+  if (!name?.trim() | !email | !phone) {
     if (!phone) setErrorStyle("phone");
     if (!email) setErrorStyle("email");
-    if (!name) setErrorStyle("name");
+    if (!name?.trim()) setErrorStyle("name");
     showError("first", "Por favor, preencha todos os campos.");
     return false;
   }
@@ -364,10 +383,7 @@ function isSecondStepValid(
   uptime,
   values
 ) {
-  if (
-    (!company?.trim() || !businessModel || !monthlyRevenue || !uptime) &&
-    values.length == 0
-  ) {
+  if (!company?.trim() || !businessModel || !monthlyRevenue || !uptime) {
     if (!uptime) setErrorStyle("uptime");
     if (!monthlyRevenue) setErrorStyle("monthlyRevenue");
     if (!businessModel) setErrorStyle("businessModel");
